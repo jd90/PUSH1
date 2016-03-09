@@ -22,23 +22,22 @@ session_start();
         <img src = "assets/bnblogocroporange.png" id="img">
     </div>
     <div class="floatright">
-        <php?
+
+        <?php
         if ($_SESSION["user"] != null) {
-        echo "<p id='loginText'>Currently signed in as: " . $_SESSION["user"];
+            echo "<p id='loginText'>Currently signed in as: " . $_SESSION["user"];
             echo "    not you?</p><button id='logout()' onclick='logout()'>LOGOUT</button>";
         }else{
-        echo "<p id='loginText'>currently not logged in!";
-            }
-
-
-            ?>
-            <script>
-                function logout() {
-                        window.location = "SearchBB.php?value=logout";
-                }
-            </script>
+            echo "<p id='loginText'>currently not logged in";
+        }
+        ?>
     </div>
-        </section>
+    <script>
+        function logout() {
+            window.location = "SearchBB.php?value=logout";
+        }
+    </script>
+</section>
 
 
 <section class="container" id="navigation2">
