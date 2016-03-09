@@ -57,10 +57,17 @@ session_start();
                         position: point,
                         icon: icon.icon
                     });
+
+                    //map.setZoom(17);
+                    //map.panTo();
+
                     bindInfoWindow(marker, map, infoWindow, html);
                 }
             });
         }
+
+
+
         function bindInfoWindow(marker, map, infoWindow, html) {
             google.maps.event.addListener(marker, 'click', function() {
                 infoWindow.setContent(html);
