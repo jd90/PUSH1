@@ -37,7 +37,7 @@ session_start();
         function load(mapreq) {
             var map = new google.maps.Map(document.getElementById("map"), {
                 center: new google.maps.LatLng(55, -3),
-                zoom: 5,
+                zoom: 10,
                 mapTypeId: 'roadmap'
             });
             var infoWindow = new google.maps.InfoWindow;
