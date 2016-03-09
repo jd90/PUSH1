@@ -81,6 +81,12 @@ session_start();
         function doNothing() {}
 
 
+        function viewOnMap(string coords){
+
+            alert(coords);
+        }
+
+
         //]]>
     </script>
 
@@ -193,7 +199,7 @@ $locations;
                 <<<NEWHTML
 
 
-                <form action="javascript:viewOnMap($count);">
+                <form onsubmit="viewOnMap({$row[longitude]},{$row[latitude]})">
                     <div class="table4" id="{$count}">
 
     <p class="{$count}" id="bbname"><strong>{$row[bbname]}</strong></p>
