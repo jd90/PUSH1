@@ -95,7 +95,7 @@ session_start();
     </script>
 
 </head>
-<body onload="load('map.php')">
+<body onload="load('map.php?location=<?php echo "{$_POST['location']}";?> ')">
 
 <section class="container" id="banner">
     <div class="floatleft">

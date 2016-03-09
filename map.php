@@ -8,6 +8,9 @@
     <?php
 
 
+    $searchLo = $_POST['location'];
+
+
     function parseToXML($htmlStr)
     {
         $xmlStr=str_replace('<','&lt;',$htmlStr);
@@ -25,7 +28,7 @@
     $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     try {
-        $st = $conn->query("SELECT [bbname],[address],[latitude],[longitude] FROM [B&B] ");
+        $st = $conn->query("SELECT [bbname],[address],[latitude],[longitude] FROM [B&B] WHERE [city] = $searchLo");
         header("Content-type: text/xml");
         echo '<markers>';
         foreach ($st->fetchAll() as $row) {
