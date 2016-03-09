@@ -97,7 +97,7 @@ session_start();
     $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     try{
-        $st = $conn-> query("SELECT * FROM [B&B] WHERE [city] = '$city'");
+        $st = $conn-> query("SELECT * FROM [B&B] WHERE [city] = '$city' ORDER BY [price]");
 
 
         foreach($st->fetchAll() as $row) {
@@ -105,10 +105,11 @@ session_start();
                 <<<NEWHTML
                     <div class="table4">
     <p>According to our database, your search of: <strong>{$row[city]}</strong> has returned the following results: </p>
-    <p><strong>{$row[city]}</strong></p>
     <p><strong>{$row[bbname]}</strong></p>
-    <p><strong>{$row[address]}</strong></p>
     <p><strong>{$row[email]}</strong></p>
+    <p><strong>{$row[price]}</strong></p>
+    <p><strong>{$row[address]}</strong></p>
+
 
 
 
