@@ -216,22 +216,22 @@ $locations;
                 <<<NEWHTML
 
 
-                <form onSubmit="panToBB({$count})">
+                <form onSubmit="return panToBB({$count})">
                     <div class="table4" id="{$count}">
 
-    <p class="{$count}" id="bbname"><strong>{$row[bbname]}</strong></p>
-    <p class="{$count}" id="email"><strong>{$row[email]}</strong></p>
-    <p class="{$count}" id="price"><strong>£{$row[price]} Per Night</strong></p>
-    <p class="{$count}" id="address"><strong>{$row[address]}</strong></p>
-    <p class="{$count}" id="long"><strong>{$row[longitude]}</strong></p>
-    <p class="{$count}" id="lat"><strong>{$row[latitude]}</strong></p>
+    <p id="bbname"><strong>{$row[bbname]}</strong></p>
+    <p id="email"><strong>{$row[email]}</strong></p>
+    <p id="price"><strong>£{$row[price]} Per Night</strong></p>
+    <p id="address"><strong>{$row[address]}</strong></p>
+    <p id="long"><strong>{$row[longitude]}</strong></p>
+    <p id="lat"><strong>{$row[latitude]}</strong></p>
 
 
 
 
 
     <p><a href="Customerinfo.php"><input type="submit" value="BOOK" /></a></p>
-    <p id="$count">{$row[longitude]},{$row[latitude]}</p><input type="submit" id="viewonmap" value="View on Map" />
+    <input type="submit" id="viewonmap" value="View on Map" />
 
 
 
