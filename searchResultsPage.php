@@ -32,7 +32,7 @@ session_start();
         };
 
 
-        function load(lat, long) {
+        function load(latlong) {
             var map = new google.maps.Map(document.getElementById("map"), {
                 center: new google.maps.LatLng(55, -3),
                 zoom: 5,
@@ -86,7 +86,7 @@ session_start();
     </script>
 
 </head>
-<body onload="load(55, -3)">
+<body onload="load('55, -3')">
 
 <section class="container" id="banner">
     <div class="floatleft">
