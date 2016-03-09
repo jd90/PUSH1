@@ -67,7 +67,7 @@ session_start();
         function initialize()
         {
             var mapProp = {
-                center: new google.maps.LatLng(40.508742,-0.120850),
+                center: new google.maps.LatLng(54.508742,-0.120850),
                 zoom:5,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
