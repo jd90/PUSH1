@@ -70,7 +70,7 @@ session_start();
 <section class="container" id="featured">
     <div class="centre">
 
-        <p>Add Room to</p>
+
 
 
         <?php
@@ -78,7 +78,7 @@ session_start();
         $bb = $_GET['bbname'];
 
         $sesh = $_SESSION['user'];
-        echo "<p>".$bb;
+        echo "<p>Add Room to ".$bb;
         echo"</p>"
 
 
