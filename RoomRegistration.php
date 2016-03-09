@@ -78,7 +78,7 @@ session_start();
         $bb = $_GET['bbname'];
 
         $sesh = $_SESSION['user'];
-        echo "<p>a ".$bb;
+        echo "<p>".$bb;
         echo"</p>"
 
 
