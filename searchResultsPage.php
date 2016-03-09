@@ -229,7 +229,7 @@ $locations;
 
 
 <a href="Customerinfo.php"><p>BOOK</p></a>
-<form onsubmit='javascript: load(dg)'>
+<form onsubmit='javascript: load({$row[city]})'>
     <input type="submit" value="View on Map" />
 </form>
 
