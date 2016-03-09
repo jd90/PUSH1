@@ -29,12 +29,12 @@ session_start();
 
             //header("Location: OwnerReviewPage.php"); ||
 
-            showOwnerReviewPage();
+
 
         }else{
             echo "<p id='loginText'>currently not logged in";
 
-            showOwnerSignInPage();
+
         }
 
         ?>
