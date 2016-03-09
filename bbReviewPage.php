@@ -50,8 +50,7 @@ session_start();
 
 <section class="container" id="featured">
     <div class="centre">
-
-        <p>That's you all signed up!</p>
+        <p>Here are the B&Bs listed under your ownership:</p>
     </div>
 </section>
 
@@ -96,7 +95,6 @@ session_start();
             }
         }
         ?>
-        <p>Here are the B&Bs listed under your ownership:</p>
 
 
         <?php
