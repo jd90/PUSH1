@@ -85,10 +85,6 @@ session_start();
         window.onload = loadScript;
     </script>
 
-    <div>
-    <div id="googleMap" style="width:500px;height:500px;"></div>
-
-    </div>
 
 
 <!--
@@ -123,6 +119,10 @@ session_start();
 </div>
     </section>
 
+<div>
+    <div id="googleMap" style="width:500px;height:500px;"></div>
+
+</div>
 
 <section class="container" id="content2">
 
