@@ -3,6 +3,32 @@ session_start();
 ?>
 
 
+    <?php
+    if ($_SESSION["user"] != null) {
+        echo "<p id='loginText'>Currently signed in as: " . $_SESSION["user"];
+        echo "    not you?</p><button id='logout()' onclick='logout()'>LOGOUT</button>";
+
+        //header("Location: OwnerReviewPage.php"); ||
+
+        showOwnerReviewPage();
+
+    }else{
+        echo "<p id='loginText'>currently not logged in";
+
+        showOwnerSignInPage();
+    }
+
+    ?>
+
+
+    <?
+
+    function showOwnerSignInPage()
+    {
+
+        $htmlOwnerSignInPage =
+<<<HTMLPAGE
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,22 +51,6 @@ session_start();
     </div>
     <div class="floatright">
 
-    <?php
-    if ($_SESSION["user"] != null) {
-        echo "<p id='loginText'>Currently signed in as: " . $_SESSION["user"];
-        echo "    not you?</p><button id='logout()' onclick='logout()'>LOGOUT</button>";
-
-        //header("Location: OwnerReviewPage.php"); ||
-
-        showOwnerReviewPage();
-
-    }else{
-        echo "<p id='loginText'>currently not logged in";
-
-        showOwnerSignInPage();
-    }
-
-    ?>
     <script>
         function logout() {
 
@@ -50,15 +60,6 @@ session_start();
 
     </div>
 </section>
-
-    <?
-
-    function showOwnerSignInPage()
-    {
-
-        $htmlOwnerSignInPage =
-<<<HTMLPAGE
-
 
 <section class="container" id="navigation">
         <div>
@@ -170,7 +171,37 @@ HTMLPAGE;
         $htmlOwnerReviewPage =
 <<<HTMLPAGE2
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon"
+          type="image/png"
+          href="assets/b&bicon.png">
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
+    <script src="script.js"></script>
+    <title>Sign In: theB&Bhub</title>
+</head>
+<body>
+
+<section class="container" id="banner">
+    <div class="floatleft">
+        <img src = "assets/bnblogocroporange.png" id="img">
+    </div>
+    <div class="floatright">
+
+    <script>
+        function logout() {
+
+            window.location = "SearchBB.php?value=logout";
+        }
+    </script>
+
+    </div>
+</section>
       <section class="container" id="navigation">
         <div>
             <nav role="main">
