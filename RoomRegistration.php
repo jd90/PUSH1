@@ -70,7 +70,7 @@ session_start();
 <section class="container" id="featured">
     <div class="centre">
 
-        <p>Add Room to <?php echo "{$_POST['bbname']}" ?> form</p>
+        <p>Add Room to</p> <?php echo "<p>{$_POST['bbname']} form</p>";  ?>
     </div>
 </section>
 
