@@ -93,7 +93,7 @@ session_start();
 <section>
 
 
-    <form action="bbReviewPage.php" method="POST">
+    <form action="bbRoomReviewPage.php" method="POST">
 
         <table class="table3">
             <tr><td colspan="3"><p>* Required Fields</p></td>
