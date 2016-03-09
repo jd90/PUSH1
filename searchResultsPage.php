@@ -199,7 +199,7 @@ $locations;
                 <<<NEWHTML
 
 
-                <form>
+                <form action="viewOnMap($count);">
                     <div class="table4" id="{$count}">
 
     <p class="{$count}" id="bbname"><strong>{$row[bbname]}</strong></p>
@@ -214,7 +214,7 @@ $locations;
 
 
     <p><a href="Customerinfo.php"><input type="submit" value="BOOK" /></a></p>
-    <p>{$row[longitude]},{$row[latitude]}</p>><input type="submit" id="viewonmap" value="View on Map" />
+    <p id="$count">{$row[longitude]},{$row[latitude]}</p><input type="submit" id="viewonmap" value="View on Map" />
 
 
 
