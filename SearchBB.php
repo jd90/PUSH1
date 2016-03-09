@@ -309,7 +309,7 @@ NEWHTML;
         <img src="assets/glasgow.jpg" id="img2">
         <p>Glasgow, Scotland</p>
             <form action="searchResultsPage.php" method="POST">
-                <input hidden id='location' name="location" value='glasgow'>glasgow</input>
+                <input hidden name="location" value='glasgow'>glasgow</input>
                 <button type="submit" >Click to View.</button>
             </form>
         <p><li><strong><a href="#">click to view</a></strong></li></p>
