@@ -50,7 +50,6 @@ session_start();
 
     </div>
 </section>
-
 <section class="container" id="navigation">
     <div>
         <nav role="main">
@@ -63,10 +62,7 @@ session_start();
         </nav>
     </div>
 </section>
-<section class="container" id="content3">
-
-
-<?
+    <?
 
     function showOwnerSignInPage()
     {
@@ -75,6 +71,8 @@ session_start();
 <<<HTMLPAGE
 
 
+
+<section class="container" id="content3">
 
    <table class='table2'>
             <tr><td colspan='2'><h1>Owner's Area</h1></td></tr>
@@ -170,6 +168,10 @@ HTMLPAGE;
 
         $htmlOwnerReviewPage =
 <<<HTMLPAGE2
+
+
+
+<section class="container" id="content3">
 
 
    <table class='table2'>
