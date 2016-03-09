@@ -11,15 +11,73 @@ session_start();
 <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <link rel="icon"
-          type="image/png"
-          href="assets/b&bicon.png">
-    <link type="text/css" rel="stylesheet" href="style.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <title>Search Results: theB&Bhub</title>
+    <title>PHP/MySQL & Google Maps Example</title>
+    <script src="https://maps.googleapis.com/maps/api/js"
+            type="text/javascript"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        var customIcons = {
+            restaurant: {
+                icon: 'http://labs.google.com/ridefinder/images/mm_20_blue.png'
+            },
+            bar: {
+                icon: 'http://labs.google.com/ridefinder/images/mm_20_red.png'
+            }
+        };
+        function load() {
+            var map = new google.maps.Map(document.getElementById("map"), {
+                center: new google.maps.LatLng(55, -3),
+                zoom: 5,
+                mapTypeId: 'roadmap'
+            });
+            var infoWindow = new google.maps.InfoWindow;
+            // Change this depending on the name of your PHP file
+            downloadUrl("hello.php", function(data) {
+                var xml = data.responseXML;
+                var markers = xml.documentElement.getElementsByTagName("marker");
+                for (var i = 0; i < markers.length; i++) {
+                    var name = markers[i].getAttribute("name");
+                    var address = markers[i].getAttribute("address");
+                    var type = markers[i].getAttribute("type");
+                    var point = new google.maps.LatLng(
+                        parseFloat(markers[i].getAttribute("lat")),
+                        parseFloat(markers[i].getAttribute("lng")));
+                    var html = "<b>" + name + "</b> <br/>" + address;
+                    var icon = customIcons[type] || {};
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: point,
+                        icon: icon.icon
+                    });
+                    bindInfoWindow(marker, map, infoWindow, html);
+                }
+            });
+        }
+        function bindInfoWindow(marker, map, infoWindow, html) {
+            google.maps.event.addListener(marker, 'click', function() {
+                infoWindow.setContent(html);
+                infoWindow.open(map, marker);
+            });
+        }
+        function downloadUrl(url, callback) {
+            var request = window.ActiveXObject ?
+                new ActiveXObject('Microsoft.XMLHTTP') :
+                new XMLHttpRequest;
+            request.onreadystatechange = function() {
+                if (request.readyState == 4) {
+                    request.onreadystatechange = doNothing;
+                    callback(request, request.status);
+                }
+            };
+            request.open('GET', url, true);
+            request.send(null);
+        }
+        function doNothing() {}
+        //]]>
+    </script>
 
 </head>
-<body>
+<body onload="load()">
 
 <section class="container" id="banner">
     <div class="floatleft">
@@ -63,44 +121,6 @@ session_start();
 
 
 
-    <script>
-        function initialize()
-        {
-            var mapProp = {
-                center: new google.maps.LatLng(54.508742,-0.120850),
-                zoom:5,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-
-            var marker=new google.maps.Marker({
-                position:new google.maps.LatLng(51.508742,-0.120850),
-            });
-
-            marker.setMap(map);
-
-            var infowindow = new google.maps.InfoWindow({
-                content:"Hello World!"
-            });
-
-            infowindow.open(map,marker);
-        }
-
-
-
-
-
-        function loadScript()
-        {
-            var script = document.createElement("script");
-            script.type = "text/javascript";
-            script.src = "http://maps.googleapis.com/maps/api/js?key=&sensor=false&callback=initialize";
-            document.body.appendChild(script);
-        }
-
-        window.onload = loadScript;
-    </script>
 
 
 
@@ -137,7 +157,8 @@ session_start();
     </section>
 
 <div id="mapView">
-    <div id="googleMap" style="width:500px;height:500px;"></div>
+
+    <div id="map" style="width:425px;height:425px;background:snow"></div>
 
 </div>
 
@@ -157,6 +178,7 @@ session_start();
         $st = $conn-> query("SELECT * FROM [B&B] WHERE [city] = '$city' ORDER BY [price]");
 
 $count=0;
+$locations;
         foreach($st->fetchAll() as $row) {
             $newhtml =
                 <<<NEWHTML
@@ -180,6 +202,8 @@ $count=0;
 
 </div>
 NEWHTML;
+
+            $locations[$count] = ("{$row[longitude]},{$row[latitude]}");
             $count++;
             print($newhtml);
 
