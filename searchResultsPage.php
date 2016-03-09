@@ -64,32 +64,25 @@ session_start();
 
 
     <script>
-        var myCenter=new google.maps.LatLng(51.508742,-0.120850);
-
         function initialize()
         {
             var mapProp = {
-                center:myCenter,
+                center: new google.maps.LatLng(54.508742,-0.120850),
                 zoom:5,
-                mapTypeId:google.maps.MapTypeId.ROADMAP
+                mapTypeId: google.maps.MapTypeId.ROADMAP
             };
-
-            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-            var marker=new google.maps.Marker({
-                position:myCenter,
-            });
-
-            marker.setMap(map);
-
-            var infowindow = new google.maps.InfoWindow({
-                content:"Hello World!"
-            });
-
-            infowindow.open(map,marker);
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
         }
 
-        google.maps.event.addDomListener(window, 'load', initialize);
+        function loadScript()
+        {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "http://maps.googleapis.com/maps/api/js?key=&sensor=false&callback=initialize";
+            document.body.appendChild(script);
+        }
+
+        window.onload = loadScript;
     </script>
 
 
