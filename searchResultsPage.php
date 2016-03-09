@@ -192,7 +192,7 @@ $locations;
                 <<<NEWHTML
 
 
-                <form onsubmit="viewOnMap("{$row[longitude]},{$row[latitude]}")">
+                <form onSubmit="viewOnMap("{$row[longitude]},{$row[latitude]}")">
                     <div class="table4" id="{$count}">
 
     <p class="{$count}" id="bbname"><strong>{$row[bbname]}</strong></p>
