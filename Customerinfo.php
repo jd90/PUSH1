@@ -22,7 +22,7 @@ session_start();
     </div>
     <div class="floatright">
 
-        <php?
+        <?php
         if ($_SESSION["user"] != null) {
         echo "<p id='loginText'>Currently signed in as: " . $_SESSION["user"];
             echo "    not you?</p><button id='logout()' onclick='logout()'>LOGOUT</button>";
