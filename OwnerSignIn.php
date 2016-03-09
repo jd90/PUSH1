@@ -50,18 +50,7 @@ session_start();
 
     </div>
 </section>
-<section class="container" id="navigation">
-    <div>
-        <nav role="main">
-            <ul>
-                <li><a href="B&Bregistration.php">Contact</a></li>
-                <li><a href="B&Bregistration.php">Register</a></li>
-                <li><a href="OwnerSignIn.php">Member Area</a></li>
-                <li><a href="SearchBB.php">Search</a></li>
-            </ul>
-        </nav>
-    </div>
-</section>
+
     <?
 
     function showOwnerSignInPage()
@@ -71,6 +60,18 @@ session_start();
 <<<HTMLPAGE
 
 
+<section class="container" id="navigation">
+        <div>
+            <nav role="main">
+                <ul>
+                    <li><a href="B&Bregistration.php">Contact</a></li>
+                    <li><a href="B&Bregistration.php">Register</a></li>
+                    <li><a href="OwnerSignIn.php">Member Area</a></li>
+                    <li><a href="SearchBB.php">Search</a></li>
+                </ul>
+            </nav>
+        </div>
+</section>
 
 <section class="container" id="content3">
 
@@ -170,7 +171,18 @@ HTMLPAGE;
 <<<HTMLPAGE2
 
 
-
+      <section class="container" id="navigation">
+        <div>
+            <nav role="main">
+                <ul>
+                    <li><a href="B&Bregistration.php">Contact</a></li>
+                    <li><a href="B&Bregistration.php">Register</a></li>
+                    <li><a href="OwnerSignIn.php">Member Area</a></li>
+                    <li><a href="SearchBB.php">Search</a></li>
+                </ul>
+            </nav>
+        </div>
+</section>
 <section class="container" id="content3">
 
 
