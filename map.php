@@ -8,7 +8,7 @@
     <?php
 
 
-    $searchLo = $_POST['location'];
+    $searchLo = $_GET['location'];
 
 
     function parseToXML($htmlStr)
