@@ -216,7 +216,7 @@ $locations;
                 <<<NEWHTML
 
 
-                <form onSubmit="return panToBB({$count})">
+                <form onsubmit="return panToBB({$count});">
                     <div class="table4" id="{$count}">
 
     <p id="bbname"><strong>{$row[bbname]}</strong></p>
