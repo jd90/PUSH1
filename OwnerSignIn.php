@@ -194,7 +194,8 @@ HTMLPAGE;
 
     <tr><td>You are on the owner's review page!</td></tr>
 
-
+    <tr><td></td><td><a href="B&Bregistration.php"><input type = 'submit' value = 'Add B&B'/></a></td></tr>
+    <tr><td></td><td><a href="bbReviewPage.php"><input type = 'submit' value = 'Review Your B&Bs'/></a></td></tr>
 
 
 
