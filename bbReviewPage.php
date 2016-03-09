@@ -122,16 +122,15 @@ session_start();
             foreach($st->fetchAll() as $row) {
                 $newhtml =
                     <<<NEWHTML
-                    <form action="RoomRegistration.php?value='{$row[bbname]}'" method="GET">
+
                        <table class="table1"> <tr>
                    <td>{$row[city]}</td>
                     <td id="bbname">{$row[bbname]}</td>
                     <td>{$row[address]}</td>
                     <td>{$row[email]}</td>
             </tr>
-            <tr><td><input type="submit" value="Add Room to this BB"></input></td></tr>
+            <tr><td><a href="RoomRegistration.php?bbname='{$row[bbname]}'"><input type="submit" value="Add Room to this BB"></input></a></td></tr>
             </table>
-            <form>
 NEWHTML;
                 print($newhtml);
             }
