@@ -186,7 +186,7 @@ session_start();
     <?php
 
     $city = $_POST['location'];
-    echo "<p>You searched for></p><p id='searchLocation'>$city</p><p>Results are ordered by ascending price</p>";
+    echo "<p>You searched for</p><p id='searchLocation'>$city</p><p>Results are ordered by ascending price</p>";
     $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     try{
