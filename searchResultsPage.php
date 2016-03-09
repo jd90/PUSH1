@@ -115,7 +115,7 @@ session_start();
 
 
 
-    <p><a href="Customerinfo.html"><input type="submit" value="BOOK" /></a></p>
+    <p><a href="Customerinfo.php"><input type="submit" value="BOOK" /></a></p>
 
 
 
