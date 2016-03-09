@@ -21,19 +21,6 @@ session_start();
         <img src = "assets/bnblogocroporange.png" id="img">
     </div>
     <div class="floatright">
-    </div>
-</section>
-
-<section class="container" id="navigation2">
-    <div>
-        <nav role="main">
-            <ul>
-                <li><a href="B&Bregistration.php">Contact</a></li>
-                <li><a href="B&Bregistration.php">Register</a></li>
-                <li><a href="OwnerSignIn.php">Member Area</a></li>
-                <li><a href="SearchBB.php">Search</a></li>
-            </ul>
-        </nav>
         <php?
         if ($_SESSION["user"] != null) {
         echo "<p id='loginText'>Currently signed in as: " . $_SESSION["user"];
@@ -50,6 +37,20 @@ session_start();
                     window.location = "SearchBB.php?value=logout";
                 }
             </script>
+    </div>
+</section>
+
+<section class="container" id="navigation2">
+    <div>
+        <nav role="main">
+            <ul>
+                <li><a href="B&Bregistration.php">Contact</a></li>
+                <li><a href="B&Bregistration.php">Register</a></li>
+                <li><a href="OwnerSignIn.php">Member Area</a></li>
+                <li><a href="SearchBB.php">Search</a></li>
+            </ul>
+        </nav>
+
     </div>
 </section>
 
