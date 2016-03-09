@@ -44,7 +44,9 @@ session_start();
             // Change this depending on the name of your PHP file
             downloadUrl(mapreq, function(data) {
                 var xml = data.responseXML;
-                var markers = xml.documentElement.getElementsByTagName("marker");
+                markers = xml.documentElement.getElementsByTagName("marker");
+
+
                 for (var i = 0; i < markers.length; i++) {
                     var name = markers[i].getAttribute("name");
                     var address = markers[i].getAttribute("address");
@@ -67,9 +69,18 @@ session_start();
 
                     bindInfoWindow(marker, map, infoWindow, html);
                 }
+
             });
         }
 
+        function panToBB(bbnameNum){
+
+        var myLatlng = new google.maps.LatLng(markers[bbnameNum].getAttribute("lat"), markers[bbnameNum].getAttribute("lng"));
+
+        map.setZoom(12);
+        map.panTo(myLatlng);
+
+        }
 
 
         function bindInfoWindow(marker, map, infoWindow, html) {
@@ -205,7 +216,7 @@ $locations;
                 <<<NEWHTML
 
 
-                <form onSubmit="load({$row[longitude]},{$row[latitude]})">
+                <form onSubmit="panToBB({$count})">
                     <div class="table4" id="{$count}">
 
     <p class="{$count}" id="bbname"><strong>{$row[bbname]}</strong></p>
