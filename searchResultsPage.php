@@ -38,7 +38,7 @@ session_start();
             });
             var infoWindow = new google.maps.InfoWindow;
             // Change this depending on the name of your PHP file
-            downloadUrl("map.php", function(data) {
+            downloadUrl("map.php?location="+document.getElementById("myList").innerHTML+"", function(data) {
                 var xml = data.responseXML;
                 var markers = xml.documentElement.getElementsByTagName("marker");
                 for (var i = 0; i < markers.length; i++) {
@@ -186,7 +186,7 @@ session_start();
     <?php
 
     $city = $_POST['location'];
-    echo "<p>You searched for ".$city.". Results are ordered by ascending price</p>";
+    echo "<p>You searched for><p id='searchLocation'>$city</p><p>Results are ordered by ascending price</p>";
     $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     try{
@@ -197,6 +197,9 @@ $locations;
         foreach($st->fetchAll() as $row) {
             $newhtml =
                 <<<NEWHTML
+
+
+                <form>
                     <div class="table4" id="{$count}">
 
     <p class="{$count}" id="bbname"><strong>{$row[bbname]}</strong></p>
@@ -216,6 +219,7 @@ $locations;
 
 
 </div>
+</form>
 NEWHTML;
 
             $locations[$count] = ("{$row[longitude]},{$row[latitude]}");
