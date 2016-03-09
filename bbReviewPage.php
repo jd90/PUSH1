@@ -122,7 +122,7 @@ session_start();
             foreach($st->fetchAll() as $row) {
                 $newhtml =
                     <<<NEWHTML
-                    <form action="RoomRegistration.php" method="POST">
+                    <form action="RoomRegistration.php?{$row[bbname]}" method="GET">
                        <table class="table1"> <tr>
                    <td>{$row[city]}</td>
                     <td id="bbname">{$row[bbname]}</td>
