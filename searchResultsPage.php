@@ -231,7 +231,7 @@ $locations;
 
 
     <p><a href="Customerinfo.php"><input type="submit" value="BOOK" /></a></p>
-    <input type="submit" id="viewonmap" value="View on Map" />
+    <input type="submit" value="View on Map" />
 
 
 
