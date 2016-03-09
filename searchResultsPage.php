@@ -64,17 +64,17 @@ session_start();
 
 
     <script>
+        var myCenter=new google.maps.LatLng(51.508742,-0.120850);
+
         function initialize()
         {
             var mapProp = {
-                center: new google.maps.LatLng(54.508742,-0.120850),
+                center:myCenter,
                 zoom:5,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
+                mapTypeId:google.maps.MapTypeId.ROADMAP
             };
-            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-
-        var myCenter=new google.maps.LatLng(58.508742,-0.120850);
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
             var marker=new google.maps.Marker({
                 position:myCenter,
@@ -83,17 +83,13 @@ session_start();
             marker.setMap(map);
 
             var infowindow = new google.maps.InfoWindow({
-                content:"Test Marker!"
+                content:"Hello World!"
             });
 
             infowindow.open(map,marker);
-
-
         }
 
         google.maps.event.addDomListener(window, 'load', initialize);
-
-
     </script>
 
 
