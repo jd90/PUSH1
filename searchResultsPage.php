@@ -32,9 +32,9 @@ session_start();
         };
 
 
-        function load(latlong) {
+        function load(lat,long) {
             var map = new google.maps.Map(document.getElementById("map"), {
-                center: new google.maps.LatLng(latlong),
+                center: new google.maps.LatLng(lat,long),
                 zoom: 5,
                 mapTypeId: 'roadmap'
             });
@@ -86,7 +86,7 @@ session_start();
     </script>
 
 </head>
-<body onload="load('55, -3')">
+<body onload="load(55, -3)">
 
 <section class="container" id="banner">
     <div class="floatleft">
