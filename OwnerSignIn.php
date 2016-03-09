@@ -48,8 +48,25 @@ session_start();
         }
     </script>
 
+    </div>
+</section>
 
-    <?
+<section class="container" id="navigation">
+    <div>
+        <nav role="main">
+            <ul>
+                <li><a href="B&Bregistration.php">Contact</a></li>
+                <li><a href="B&Bregistration.php">Register</a></li>
+                <li><a href="OwnerSignIn.php">Member Area</a></li>
+                <li><a href="SearchBB.php">Search</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<section class="container" id="content3">
+
+
+<?
 
     function showOwnerSignInPage()
     {
@@ -58,23 +75,6 @@ session_start();
 <<<HTMLPAGE
 
 
-        </div>
-</section>
-
-<section class="container" id="navigation">
-        <div>
-            <nav role="main">
-                <ul>
-                    <li><a href="B&Bregistration.php">Contact</a></li>
-                    <li><a href="B&Bregistration.php">Register</a></li>
-                    <li><a href="OwnerSignIn.php">Member Area</a></li>
-                    <li><a href="SearchBB.php">Search</a></li>
-                </ul>
-            </nav>
-        </div>
-</section>
-
-<section class="container" id="content3">
 
    <table class='table2'>
             <tr><td colspan='2'><h1>Owner's Area</h1></td></tr>
@@ -170,21 +170,6 @@ HTMLPAGE;
 
         $htmlOwnerReviewPage =
 <<<HTMLPAGE2
-
-
-      <section class="container" id="navigation">
-        <div>
-            <nav role="main">
-                <ul>
-                    <li><a href="B&Bregistration.php">Contact</a></li>
-                    <li><a href="B&Bregistration.php">Register</a></li>
-                    <li><a href="OwnerSignIn.php">Member Area</a></li>
-                    <li><a href="SearchBB.php">Search</a></li>
-                </ul>
-            </nav>
-        </div>
-</section>
-<section class="container" id="content3">
 
 
    <table class='table2'>
