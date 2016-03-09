@@ -64,8 +64,11 @@ session_start();
 
                     var myLatlng = new google.maps.LatLng(markers[0].getAttribute("lat"), markers[0].getAttribute("lng"));
 
+                    if (markers[0].getAttribute("lat") != null) {
+
                     map.setZoom(12);
                     map.panTo(myLatlng);
+                }
 
                     bindInfoWindow(marker, map, infoWindow, html);
                 }
