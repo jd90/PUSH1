@@ -129,7 +129,7 @@ session_start();
                     <td>{$row[address]}</td>
                     <td>{$row[email]}</td>
             </tr>
-            <tr><td><input type="submit">Add Room to this BB</input></td></tr>
+            <tr><td><input type="submit" value="Add Room to this BB"></input></td></tr>
             </table>
             <form>
 NEWHTML;
