@@ -216,7 +216,7 @@ $locations;
                 <<<NEWHTML
 
 
-                <form action='' onsubmit=''>
+
                     <div class="table4" id="{$count}">
 
     <p id="bbname"><strong>{$row[bbname]}</strong></p>
@@ -229,11 +229,11 @@ $locations;
 
 
 <a href="Customerinfo.php"><p>BOOK</p></a>
+<form onsubmit='javascript: viewOnMap({$count})'>
     <input type="submit" value="View on Map" />
-
+</form>
 
 </div>
-</form>
 NEWHTML;
 
             $locations[$count] = ("{$row[longitude]},{$row[latitude]}");
