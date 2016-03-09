@@ -75,8 +75,9 @@ session_start();
 
         <?php
 
+        $bb = $_POST['bbname'];
 
-        echo "<p>{$_POST['bbname']} form</p>";
+        echo "<p>{$bb} form</p>";
 
 
 
