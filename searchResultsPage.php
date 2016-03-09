@@ -38,7 +38,7 @@ session_start();
             });
             var infoWindow = new google.maps.InfoWindow;
             // Change this depending on the name of your PHP file
-            downloadUrl("hello.php", function(data) {
+            downloadUrl("map.php", function(data) {
                 var xml = data.responseXML;
                 var markers = xml.documentElement.getElementsByTagName("marker");
                 for (var i = 0; i < markers.length; i++) {
