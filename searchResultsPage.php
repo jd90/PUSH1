@@ -156,16 +156,17 @@ session_start();
 </div>
     </section>
 
-<div id="mapView">
-
-    <div id="map" style="width:425px;height:425px;background:snow"></div>
-
-</div>
 
 <section class="container" id="content2">
 
 
     <div class="main">
+
+        <div id="mapView">
+
+            <div id="map" style="width:425px;height:425px;background:snow"></div>
+
+        </div>
 
 
     <?php
