@@ -145,19 +145,19 @@ $count=0;
                 <<<NEWHTML
                     <div class="table4" id="{$count}">
 
-    <p id="bbname"><strong>{$row[bbname]}</strong></p>
-    <p id="email"><strong>{$row[email]}</strong></p>
-    <p id="price"><strong>£{$row[price]} Per Night</strong></p>
-    <p id="address"><strong>{$row[address]}</strong></p>
-    <p id="long"><strong>{$row[longitude]}</strong></p>
-    <p id="lat"><strong>{$row[latitude]}</strong></p>
+    <p class="{$count}" id="bbname"><strong>{$row[bbname]}</strong></p>
+    <p class="{$count}" id="email"><strong>{$row[email]}</strong></p>
+    <p class="{$count}" id="price"><strong>£{$row[price]} Per Night</strong></p>
+    <p class="{$count}" id="address"><strong>{$row[address]}</strong></p>
+    <p class="{$count}" id="long"><strong>{$row[longitude]}</strong></p>
+    <p class="{$count}" id="lat"><strong>{$row[latitude]}</strong></p>
 
 
 
 
 
     <p><a href="Customerinfo.php"><input type="submit" value="BOOK" /></a></p>
-    <p><input type="submit" id="viewonmap" value="View on Map" /></p>
+    <p hidden><input type="submit" id="viewonmap"value="View on Map" />{$row[longitude]},{$row[latitude]}</p>
 
 
 
