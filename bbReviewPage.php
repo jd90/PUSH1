@@ -2,30 +2,25 @@
 session_start();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Results</title>
+    <link rel="icon"
+          type="image/png"
+          href="assets/b&bicon.png">
     <link type="text/css" rel="stylesheet" href="style.css"/>
-
-    <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
-
-
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <title>Register: theB&Bhub</title>
 </head>
 
-<div class='container'>
-    <header>
-        <section class="right">
-            <div class="left">
-                <a href="Home.php"><img src ="assets/b&blogotransparent.png" id="img"></a>
+<section class="container" id="banner">
+    <div class="floatleft">
+        <img src = "assets/bnblogocroporange.png" id="img">
+    </div>
+    <div class="floatright">
 
-
-            </div>
-            <div class="rightside">
                 <?php
                 if ($_SESSION["user"] != null) {
                     echo "<p id='loginText'>Currently signed in as: " . $_SESSION["user"];
@@ -43,31 +38,34 @@ session_start();
         </section>
 
 
+</div>
+</section>
 
-    </header>
-
-    <div class="nav">
-        <nav>
-            <ul class="moveright">
-
-                <!--<li><a href="B&Bregistration.html">Help</a></li>-->
-                <li><a href="OwnerRegistration.php">Register</a></li>
-                <!-- <li><a href="B&Bregistration.html">Register</a></li> -->
-                <li><a href="OwnerSignIn.php">Owner's Page</a></li>
-                <li><a href="Home.php">Search</a></li>
+<section class="spacer" id="spacer">
 
 
-            </ul>
+</section>
 
-        </nav>
+
+
+<section class="container" id="featured">
+    <div class="centre">
+
+        <p>That's you all signed up!</p>
     </div>
+</section>
+
+
+<body>
 
 
 
 
+<main>
+    <!--onsubmit="return validateOwner(this);"  javascript method-->
+    <div class="">
+        <table class="table1">
 
-    <body>
-    <main>
         <?php
         /**
          * Created by PhpStorm.
@@ -124,13 +122,34 @@ NEWHTML;
         {print"$e";}
         ?>
 
+            </table>
+</main>
 
-    </main>
 
 
-    </body><div class="foot">
-        <footer>
 
-            <p>Copyright. Team D Solutions.</p>
-        </footer></div>
+<section class="spacer" id="spacer">
+
+
+</section>
+<section class="container" id="foot">
+
+    <div id="footernav">
+        <nav role="sub">
+            <ul>
+                <li><a href="B&Bregistration.php">Contact</a></li>
+                <li><a href="B&Bregistration.php">Register</a></li>
+                <li><a href="OwnerSignIn.php">Member Area</a></li>
+                <li><a href="SearchBB.php">Search</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="copyright">
+        <hr width="100%" size="1">
+        <p>Copyright. Team D Solutions.</p>
+    </div>
+
+</section>
+
+</body>
 </html>
