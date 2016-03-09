@@ -80,14 +80,6 @@ session_start();
         }
         function doNothing() {}
 
-        function viewOnMap(int count){
-
-
-            alert("Location = "+document.getElementById>document.getElementById("count").innerHTML);
-
-        }
-
-
 
         //]]>
     </script>
