@@ -157,7 +157,7 @@ $count=0;
 
 
     <p><a href="Customerinfo.php"><input type="submit" value="BOOK" /></a></p>
-    <p hidden><input type="submit" id="viewonmap"value="View on Map" />{$row[longitude]},{$row[latitude]}</p>
+    <p ><input type="submit" id="viewonmap" value="View on Map" />{$row[longitude]},{$row[latitude]}</p>
 
 
 
