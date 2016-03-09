@@ -69,6 +69,13 @@ session_start();
             center: new google.maps.LatLng(57.2, -2.2), zoom: 10
         }
         var map = new google.maps.Map(mapCanvas, mapOptions);
+
+        function viewonmap(){
+
+
+        }
+
+
     </script>
 </section>
 
@@ -110,8 +117,8 @@ session_start();
     <p><strong>{$row[email]}</strong></p>
     <p><strong>£{$row[price]} Per Night</strong></p>
     <p><strong>{$row[address]}</strong></p>
-
-
+    <p><strong>{$row[longitude]}</strong></p>
+    <p><strong>{$row[latitude]}</strong></p>
 
 
 
@@ -161,7 +168,6 @@ NEWHTML;
     </div>
 
 </section>
-
 
 
 
