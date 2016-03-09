@@ -9,7 +9,13 @@ session_start();
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="icon"
+          type="image/png"
+          href="assets/b&bicon.png">
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <title>PHP/MySQL & Google Maps Example</title>
     <script src="https://maps.googleapis.com/maps/api/js"
