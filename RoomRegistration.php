@@ -100,7 +100,8 @@ session_start();
 
             <tr>
                 <td><label for="bbname">B&B Name: *</label></td>
-                <td><input id="bbname" type="text" class="inputform" name="bbname" value="<?php echo"".$bb ?>" /></td>
+                <td><select id="bbname" class="inputform" name="bbname">
+                        <option value="<?php echo"".$bb ?>"><?php echo"".$bb ?></option></td>
 
                 <td>
                     <label for="city">City: *</label></td>
