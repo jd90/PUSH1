@@ -119,7 +119,7 @@ session_start();
 </div>
     </section>
 
-<div>
+<div id="mapView">
     <div id="googleMap" style="width:500px;height:500px;"></div>
 
 </div>
