@@ -308,6 +308,10 @@ NEWHTML;
         <nav role="sub2">
         <img src="assets/glasgow.jpg" id="img2">
         <p>Glasgow, Scotland</p>
+            <form action="searchbb.php" method="post">
+                <input hidden id='location' value='glasgow'>
+                <button type="submit" value="Click to View"></button>
+            </form>
         <p><li><strong><a href="#">click to view</a></strong></li></p>
         <img src="assets/Aberdeen.jpg" id="img2">
         <p>Aberdeen, Scotland</p>
