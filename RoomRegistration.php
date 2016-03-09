@@ -78,7 +78,8 @@ session_start();
         $bb = $_POST['bbname'];
 
         $sesh = $_SESSION['user'];
-        print("<p>$bb $sesh form.</p>");
+        echo "<p>a ".$bb;
+        echo"</p>"
 
 
 
