@@ -189,12 +189,15 @@ session_start();
 
 $count=0;
 $locations;
+
         foreach($st->fetchAll() as $row) {
+            $lat = parseInt($row[longitude]);
+            $long = parseInt($row[latitude]);
             $newhtml =
                 <<<NEWHTML
 
 
-                <form onSubmit="load({$row[longitude]},{$row[latitude]})">
+                <form onSubmit="load($lat,$long)">
                     <div class="table4" id="{$count}">
 
     <p class="{$count}" id="bbname"><strong>{$row[bbname]}</strong></p>
