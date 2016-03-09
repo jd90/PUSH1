@@ -298,6 +298,10 @@ NEWHTML;
     <p><li><strong><a href="#">click to view</a></strong></li></p>
     <img src="assets/edinburgh.jpg" id="img2">
     <p>Edinburgh, Scotland</p>
+        <form action="searchResultsPage.php" method="POST">
+            <input hidden name="location" value='edinburgh'>
+            <button type="submit" >Click to View.</button>
+        </form>
     <p><li><strong><a href="#">click to view</a></strong></li></p>
         </nav>
 
@@ -309,12 +313,16 @@ NEWHTML;
         <img src="assets/glasgow.jpg" id="img2">
         <p>Glasgow, Scotland</p>
             <form action="searchResultsPage.php" method="POST">
-                <input hidden name="location" value='glasgow'>glasgow</input>
+                <input hidden name="location" value='glasgow'>
                 <button type="submit" >Click to View.</button>
             </form>
         <p><li><strong><a href="#">click to view</a></strong></li></p>
         <img src="assets/Aberdeen.jpg" id="img2">
         <p>Aberdeen, Scotland</p>
+            <form action="searchResultsPage.php" method="POST">
+                <input hidden name="location" value='aberdeen'>
+                <button type="submit" >Click to View.</button>
+            </form>
         <p><li><strong><a href="#">click to view</a></strong></li></p>
             </nav>
     </section>
@@ -326,6 +334,10 @@ NEWHTML;
         <p><li><strong><a href="#">click to view</a></strong></li></p>
         <img src="assets/manchester.jpg" id="img2">
         <p>Manchester, England</p>
+            <form action="searchResultsPage.php" method="POST">
+                <input hidden name="location" value='manchester'>
+                <button type="submit" >Click to View.</button>
+            </form>
         <p><li><strong><a href="#">click to view</a></strong></li></p>
         </nav>
     </section>
