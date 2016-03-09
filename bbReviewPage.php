@@ -96,13 +96,15 @@ session_start();
             $email = $_POST['email'];
             $bbdescription = $_POST['bbdescription'];
             $roomdescription = $_POST['roomdescription'];
+            $price = $_POST['price'];
             $checkin = $_POST['checkin'];
             $checkout = $_POST['checkout'];
+            $picture =$_POST['picture'];
             $pets = $_POST['pets'];
             $conn = new PDO ("sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             try {
-                $st1 = "INSERT INTO [B&B] ([bbname], [address], [city], [telephone], [email]) VALUES ('" . $bbname . "', '" . $address . "', '" . $city . "', '" . $telephone . "', '" . $owneremail . "')";
+                $st1 = "INSERT INTO [B&B] ([bbname], [address], [city], [telephone], [email], [price], [checkin], [checkout]) VALUES ('" . $bbname . "', '" . $address . "', '" . $city . "', '" . $telephone . "', '" . $owneremail . "', '" . $price . "', '" . $checkin . "', '" . $checkout . "')";
                 $conn->exec($st1);
             } catch (PDOException $e) {
                 print"$e";

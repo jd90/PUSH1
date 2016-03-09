@@ -79,7 +79,7 @@ session_start();
 <section>
 
 
-    <form>
+    <form action="" method="POST">
 
         <table class="table3">
             <tr><td colspan="3"><p>* Required Fields</p></td>
