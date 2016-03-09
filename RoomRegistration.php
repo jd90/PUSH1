@@ -75,7 +75,7 @@ session_start();
 
         <?php
 
-        $bb = $_POST['bbname'];
+        $bb = $_GET['bbname'];
 
         $sesh = $_SESSION['user'];
         echo "<p>a ".$bb;
