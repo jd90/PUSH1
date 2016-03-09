@@ -37,6 +37,20 @@ session_start();
             </script>
         </section>
 
+</div>
+</section>
+
+<section class="container" id="navigation2">
+    <div>
+        <nav role="main">
+            <ul>
+                <li><a href="B&Bregistration.php">Contact</a></li>
+                <li><a href="B&Bregistration.php">Register</a></li>
+                <li><a href="OwnerSignIn.php">Member Area</a></li>
+                <li><a href="SearchBB.php">Search</a></li>
+            </ul>
+        </nav>
+
 
 </div>
 </section>

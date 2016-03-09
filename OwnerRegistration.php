@@ -3,24 +3,24 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon"
-          type="image/png"
-          href="assets/b&bicon.png">
-    <link type="text/css" rel="stylesheet" href="style.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <title>Register: theB&Bhub</title>
-</head>
-<body>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <link rel="icon"
+                  type="image/png"
+                  href="assets/b&bicon.png">
+            <link type="text/css" rel="stylesheet" href="style.css"/>
+            <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+            <title>Register: theB&Bhub</title>
+        </head>
+        <body>
 
-<section class="container" id="banner">
-    <div class="floatleft">
-        <img src = "assets/bnblogocroporange.png" id="img">
-    </div>
-    <div class="floatright">
+        <section class="container" id="banner">
+            <div class="floatleft">
+                <img src = "assets/bnblogocroporange.png" id="img">
+            </div>
+            <div class="floatright">
 
     <?php
     if ($_SESSION["user"] != null) {
