@@ -108,7 +108,7 @@ session_start();
 
     <p><strong>{$row[bbname]}</strong></p>
     <p><strong>{$row[email]}</strong></p>
-    <p><strong>{$row[price]}</strong></p>
+    <p><strong>£{$row[price]} Per Night</strong></p>
     <p><strong>{$row[address]}</strong></p>
 
 
