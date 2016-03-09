@@ -229,7 +229,7 @@ $locations;
 
 
 <a href="Customerinfo.php"><p>BOOK</p></a>
-<form onsubmit='javascript: panToBB({$count})'>
+<form onsubmit='javascript: load(dg)'>
     <input type="submit" value="View on Map" />
 </form>
 
