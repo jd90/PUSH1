@@ -308,7 +308,7 @@ NEWHTML;
         <nav role="sub2">
         <img src="assets/glasgow.jpg" id="img2">
         <p>Glasgow, Scotland</p>
-            <form action="searchbb.php" method="post">
+            <form action="searchResultsPage.php" method="post">
                 <input hidden id='location' value='glasgow'>
                 <button type="submit" >Click to View</button>
             </form>
