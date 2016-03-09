@@ -81,11 +81,6 @@ session_start();
         function doNothing() {}
 
 
-        function viewOnMap(string coords){
-
-            alert(coords);
-        }
-
 
         //]]>
     </script>
