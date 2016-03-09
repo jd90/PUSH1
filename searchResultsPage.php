@@ -216,7 +216,7 @@ $locations;
                 <<<NEWHTML
 
 
-                <form onsubmit=''>
+                <form action='' onsubmit=''>
                     <div class="table4" id="{$count}">
 
     <p id="bbname"><strong>{$row[bbname]}</strong></p>
