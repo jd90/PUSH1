@@ -44,8 +44,8 @@ session_start();
     <div>
         <nav role="main">
             <ul>
-                <li><a href="B&Bregistration.html">Contact</a></li>
-                <li><a href="B&Bregistration.html">Register</a></li>
+                <li><a href="B&Bregistration.php">Contact</a></li>
+                <li><a href="B&Bregistration.php">Register</a></li>
                 <li><a href="OwnerSignIn.php">Member Area</a></li>
                 <li><a href="SearchBB.php">Search</a></li>
             </ul>
@@ -148,8 +148,8 @@ session_start();
     <div id="footernav">
         <nav role="sub">
             <ul>
-                <li><a href="B&Bregistration.html">Contact</a></li>
-                <li><a href="B&Bregistration.html">Register</a></li>
+                <li><a href="B&Bregistration.php">Contact</a></li>
+                <li><a href="B&Bregistration.php">Register</a></li>
                 <li><a href="OwnerSignIn.php">Member Area</a></li>
                 <li><a href="SearchBB.php">Search</a></li>
             </ul>
