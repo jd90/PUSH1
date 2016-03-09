@@ -32,15 +32,17 @@ session_start();
         };
 
 
-        function load(lat,long) {
+
+
+        function load(mapreq) {
             var map = new google.maps.Map(document.getElementById("map"), {
-                center: new google.maps.LatLng(lat,long),
+                center: new google.maps.LatLng(55, -3),
                 zoom: 5,
                 mapTypeId: 'roadmap'
             });
             var infoWindow = new google.maps.InfoWindow;
             // Change this depending on the name of your PHP file
-            downloadUrl("map.php", function(data) {
+            downloadUrl(mapreq, function(data) {
                 var xml = data.responseXML;
                 var markers = xml.documentElement.getElementsByTagName("marker");
                 for (var i = 0; i < markers.length; i++) {
@@ -93,7 +95,7 @@ session_start();
     </script>
 
 </head>
-<body onload="load(55, -3)">
+<body onload="load('map.php')">
 
 <section class="container" id="banner">
     <div class="floatleft">
