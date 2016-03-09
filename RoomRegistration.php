@@ -78,8 +78,8 @@ session_start();
         $bb = $_GET['bbname'];
 
         $sesh = $_SESSION['user'];
-        echo "<p>Add Room to ".$bb;
-        echo"</p>"
+        echo "<p>Add Room to <strong>".$bb;
+        echo"</strong></p>"
 
 
 
