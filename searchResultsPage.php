@@ -30,7 +30,9 @@ session_start();
                 icon: 'http://labs.google.com/ridefinder/images/mm_20_red.png'
             }
         };
-        function load() {
+
+
+        function load(lat, long) {
             var map = new google.maps.Map(document.getElementById("map"), {
                 center: new google.maps.LatLng(55, -3),
                 zoom: 5,
@@ -84,7 +86,7 @@ session_start();
     </script>
 
 </head>
-<body onload="load()">
+<body onload="load(55, -3)">
 
 <section class="container" id="banner">
     <div class="floatleft">
