@@ -229,7 +229,7 @@ $locations;
 
 
 <a href="Customerinfo.php"><p>BOOK</p></a>
-<form onsubmit='loadBB('map.php?bbname={$row[bbname]}')'>
+<form onsubmit="loadBB('map.php?bbname={$row[bbname]}')">
     <input type="submit" value="View on Map." />
 </form>
 
