@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +34,21 @@
                 <li><a href="SearchBB.php">Search</a></li>
             </ul>
         </nav>
+        <php?
+        if ($_SESSION["user"] != null) {
+        echo "<p id='loginText'>Currently signed in as: " . $_SESSION["user"];
+            echo "    not you?</p><button id='logout()' onclick='logout()'>LOGOUT</button>";
+        }else{
+        echo "<p id='loginText'>currently not logged in!";
+            }
+
+
+            ?>
+            <script>
+                function logout() {
+                    window.location = "SearchBB.php";
+                }
+            </script>
     </div>
 </section>
 
