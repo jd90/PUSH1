@@ -80,9 +80,7 @@ session_start();
         }
         function doNothing() {}
 
-
-
-        //]]>
+     //]]>
     </script>
 
 </head>
@@ -194,7 +192,7 @@ $locations;
                 <<<NEWHTML
 
 
-                <form onsubmit="viewOnMap({$row[longitude]},{$row[latitude]})">
+                <form onsubmit="viewOnMap("{$row[longitude]},{$row[latitude]}")">
                     <div class="table4" id="{$count}">
 
     <p class="{$count}" id="bbname"><strong>{$row[bbname]}</strong></p>
@@ -226,6 +224,16 @@ NEWHTML;
     catch(PDOException $e)
     {print"$e";}
     ?>
+
+        <script>
+            function viewOnMap(coords){
+
+                alert(coords);
+            }
+
+        </script>
+
+
 
 </div>
     </section>
