@@ -139,18 +139,18 @@ session_start();
     try{
         $st = $conn-> query("SELECT * FROM [B&B] WHERE [city] = '$city' ORDER BY [price]");
 
-
+$count=0;
         foreach($st->fetchAll() as $row) {
             $newhtml =
                 <<<NEWHTML
-                    <div class="table4">
+                    <div class="table4" id="{$count}">
 
-    <p><strong>{$row[bbname]}</strong></p>
-    <p><strong>{$row[email]}</strong></p>
-    <p><strong>£{$row[price]} Per Night</strong></p>
-    <p><strong>{$row[address]}</strong></p>
-    <p><strong>{$row[longitude]}</strong></p>
-    <p><strong>{$row[latitude]}</strong></p>
+    <p id="bbname"><strong>{$row[bbname]}</strong></p>
+    <p id="email"><strong>{$row[email]}</strong></p>
+    <p id="price"><strong>£{$row[price]} Per Night</strong></p>
+    <p id="address"><strong>{$row[address]}</strong></p>
+    <p id="long"><strong>{$row[longitude]}</strong></p>
+    <p id="lat"><strong>{$row[latitude]}</strong></p>
 
 
 
@@ -163,7 +163,9 @@ session_start();
 
 </div>
 NEWHTML;
+            $count++;
             print($newhtml);
+
         }
     }
     catch(PDOException $e)
