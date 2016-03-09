@@ -37,7 +37,7 @@ session_start();
         function load(mapreq) {
             var map = new google.maps.Map(document.getElementById("map"), {
                 center: new google.maps.LatLng(55, -3),
-                zoom: 10,
+                zoom: 5,
                 mapTypeId: 'roadmap'
             });
             var infoWindow = new google.maps.InfoWindow;
@@ -60,8 +60,10 @@ session_start();
                         icon: icon.icon
                     });
 
-                    //map.setZoom(17);
-                    //map.panTo();
+                    var myLatlng = new google.maps.LatLng(markers[0].getAttribute("lat"), markers[0].getAttribute("lng"));
+
+                    map.setZoom(10);
+                    map.panTo(myLatlng);
 
                     bindInfoWindow(marker, map, infoWindow, html);
                 }
