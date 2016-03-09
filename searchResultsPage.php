@@ -201,7 +201,7 @@ $locations;
                 <<<NEWHTML
 
 
-                <form onSubmit="return viewOnMap($count);">
+                <form action="javascript:viewOnMap($count);">
                     <div class="table4" id="{$count}">
 
     <p class="{$count}" id="bbname"><strong>{$row[bbname]}</strong></p>
