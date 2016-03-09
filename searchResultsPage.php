@@ -228,7 +228,7 @@ $locations;
 
 
 
-<p><a href="Customerinfo.php"><button type=submit">BOOK</button></a></p>
+<p><a href="Customerinfo.php"><button >BOOK</button></a></p>
     <input type="submit" value="View on Map" />
 
 
