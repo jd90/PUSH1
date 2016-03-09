@@ -62,7 +62,7 @@ session_start();
 
                     var myLatlng = new google.maps.LatLng(markers[0].getAttribute("lat"), markers[0].getAttribute("lng"));
 
-                    map.setZoom(12);
+                    map.setZoom(13);
                     map.panTo(myLatlng);
 
                     bindInfoWindow(marker, map, infoWindow, html);
