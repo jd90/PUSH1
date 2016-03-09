@@ -76,7 +76,7 @@ session_start();
         <?php
 
 
-        echo "<p>'{$_POST['bbname']}' form</p>";
+        echo "<p>{$_POST['bbname']} form</p>";
 
 
 
