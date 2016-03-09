@@ -50,7 +50,7 @@
     $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     try {
-        $st = $conn->query("SELECT [bbname],[address],[latitude],[longitude] FROM [B&B] WHERE [city] = 'Aberdeen'");
+        $st = $conn->query("SELECT [bbname],[address],[latitude],[longitude] FROM [B&B] ");
         header("Content-type: text/xml");
         echo '<markers>';
         foreach ($st->fetchAll() as $row) {
