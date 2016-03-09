@@ -100,7 +100,7 @@ session_start();
 
             <tr>
                 <td><label for="bbname">B&B Name: *</label></td>
-                <td hidden><input id="bbname" type="text" class="inputform" name="bbname" placeholder="Enter your B&B Name" required /></td>
+                <td><input id="bbname" type="text" class="inputform" name="bbname" placeholder= <?php echo"".$bb ?> required /></td>
 
                 <td>
                     <label for="city">City: *</label></td>
