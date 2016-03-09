@@ -92,7 +92,9 @@ session_start();
 
 
     <?php
+
     $city = $_POST['location'];
+    echo "You searched for "+$city+", ordered by ascending price";
     $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     try{
@@ -103,7 +105,7 @@ session_start();
             $newhtml =
                 <<<NEWHTML
                     <div class="table4">
-    <p>According to our database, your search of: <strong>{$row[city]}</strong> has returned the following results: </p>
+
     <p><strong>{$row[bbname]}</strong></p>
     <p><strong>{$row[email]}</strong></p>
     <p><strong>{$row[price]}</strong></p>
