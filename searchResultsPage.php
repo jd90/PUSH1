@@ -72,7 +72,24 @@ session_start();
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
             var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+            var marker=new google.maps.Marker({
+                position:new google.maps.LatLng(51.508742,-0.120850),
+            });
+
+            marker.setMap(map);
+
+            var infowindow = new google.maps.InfoWindow({
+                content:"Hello World!"
+            });
+
+            infowindow.open(map,marker);
         }
+
+
+
+
 
         function loadScript()
         {
