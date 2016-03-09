@@ -228,11 +228,8 @@ $locations;
 
 
 
-
-
-    <p><a href="Customerinfo.php"><input type="submit" value="BOOK" /></a></p>
+<p><a href="Customerinfo.php"><input type="submit" value="BOOK" /></a></p>
     <input type="submit" value="View on Map" />
-
 
 
 </div>
@@ -249,19 +246,10 @@ NEWHTML;
     {print"$e";}
     ?>
 
-        <script>
-            function viewOnMap(coords){
-
-                alert(coords);
-            }
-
-        </script>
-
-
 
 </div>
     </section>
-
+<p><a href="Customerinfo.php"><input type="submit" value="BOOK" /></a></p>
 
 <section class="spacer" id="spacer">
 
