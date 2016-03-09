@@ -214,7 +214,7 @@ $locations;
 
 
     <p><a href="Customerinfo.php"><input type="submit" value="BOOK" /></a></p>
-    <p>{$row[longitude]},{$row[latitude]}</p>><input type="submit" id="viewonmap" value="View on Map" />
+    <p>{$row[longitude]},{$row[latitude]}</p><input type="submit" id="viewonmap" value="View on Map" />
 
 
 
