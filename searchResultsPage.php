@@ -197,7 +197,7 @@ $locations;
                 <<<NEWHTML
 
 
-                <form onSubmit="load($lat,$long)">
+                <form onSubmit="load({$lat},{$long})">
                     <div class="table4" id="{$count}">
 
     <p class="{$count}" id="bbname"><strong>{$row[bbname]}</strong></p>
