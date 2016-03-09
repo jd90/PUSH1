@@ -118,6 +118,7 @@ session_start();
 
 
     <p><a href="Customerinfo.php"><input type="submit" value="BOOK" /></a></p>
+    <p><input type="submit" id="viewonmap" value="View on Map" /></p>
 
 
 
