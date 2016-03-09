@@ -229,7 +229,7 @@ $locations;
 
 
 <a href="Customerinfo.php"><p>BOOK</p></a>
-<form onsubmit='javascript: viewOnMap({$count})'>
+<form onsubmit='javascript: panToBB({$count})'>
     <input type="submit" value="View on Map" />
 </form>
 
@@ -249,8 +249,6 @@ NEWHTML;
 
 </div>
     </section>
-<p><a href="Customerinfo.php"><input type="submit" value="BOOK" /></a></p>
-
 <section class="spacer" id="spacer">
 
 
