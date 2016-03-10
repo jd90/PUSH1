@@ -80,13 +80,13 @@ session_start();
         function panToBB(bbnameNum){
 
             //alert(""+bbnameNum);
-        var myLatlng = new google.maps.LatLng(markers[2].getAttribute("lat"), markers[2].getAttribute("lng"));
+        var myLatlng = new google.maps.LatLng(markers[bbnameNum].getAttribute("lat"), markers[bbnameNum].getAttribute("lng"));
 
         map.setZoom(14);
         map.panTo(myLatlng);
 
             infoWindow.setContent(html);
-            infoWindow.open(map, marker);
+            infoWindow.open(map, markers[bbnameNum]);
 
         }
 
