@@ -85,8 +85,7 @@ session_start();
         map.panTo(myLatlng);
 
 
-            infoWindow.setContent(html);
-            infoWindow.open(map, markers[bbnameNum]);
+
         }
 
 
