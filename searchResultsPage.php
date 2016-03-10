@@ -34,9 +34,10 @@ session_start();
 
 
 
-        function load(mapreq) {
+        function load(mapreq, x) {
+
             var map = new google.maps.Map(document.getElementById("map"), {
-                //center: new google.maps.LatLng(55, -3),
+                center: new google.maps.LatLng(55, -3),
                 zoom: 5,
                 mapTypeId: 'roadmap'
             });
@@ -83,6 +84,9 @@ session_start();
         map.setZoom(12);
         map.panTo(myLatlng);
 
+
+            infoWindow.setContent(html);
+            infoWindow.open(map, markers[bbnameNum]);
         }
 
 
@@ -233,7 +237,7 @@ $locations;
 
 <a href="Customerinfo.php"><p>BOOK</p></a>
 
-<button style="float:left;" onclick="loadBB('map.php?bbname={$row[bbname]}')">ViewMap</button>
+<button style="float:left;" onclick="panToBB($count)">ViewMap</button>
 
 </div>
 NEWHTML;
@@ -279,8 +283,12 @@ NEWHTML;
 </section>
 
 
+
+
 <script type="text/javascript">
-    //<![CDATA[
+    /*
+
+
     var customIcons = {
         restaurant: {
             icon: 'http://labs.google.com/ridefinder/images/mm_20_blue.png'
@@ -289,7 +297,6 @@ NEWHTML;
             icon: 'http://labs.google.com/ridefinder/images/mm_20_red.png'
         }
     };
-
 
 
 
@@ -354,6 +361,7 @@ NEWHTML;
     function doNothing() {}
 
     //]]>
+    **/
 </script>
 
 
