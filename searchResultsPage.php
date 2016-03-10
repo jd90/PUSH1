@@ -36,7 +36,7 @@ session_start();
 
         function load(mapreq) {
 
-            var map = new google.maps.Map(document.getElementById("map"), {
+            map = new google.maps.Map(document.getElementById("map"), {
                 center: new google.maps.LatLng(55, -3),
                 zoom: 5,
                 mapTypeId: 'roadmap'
