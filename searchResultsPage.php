@@ -41,7 +41,7 @@ session_start();
                 zoom: 5,
                 mapTypeId: 'roadmap'
             });
-            var infoWindow = new google.maps.InfoWindow;
+            infoWindow = new google.maps.InfoWindow;
             // Change this depending on the name of your PHP file
             downloadUrl(mapreq, function(data) {
                 var xml = data.responseXML;
@@ -55,7 +55,7 @@ session_start();
                     var point = new google.maps.LatLng(
                         parseFloat(markers[i].getAttribute("lat")),
                         parseFloat(markers[i].getAttribute("lng")));
-                    var html = "<b>" + name + "</b> <br/>" + address;
+                    html = "<b>" + name + "</b> <br/>" + address;
                     var icon = customIcons[type] || {};
                     var marker = new google.maps.Marker({
                         map: map,
@@ -85,7 +85,8 @@ session_start();
         map.setZoom(14);
         map.panTo(myLatlng);
 
-
+            infoWindow.setContent(html);
+            infoWindow.open(map, marker);
 
         }
 
@@ -237,7 +238,7 @@ $locations;
 
 <a href="Customerinfo.php"><p>BOOK</p></a>
 
-<button style="float:left;" onclick="panToBB($count)">ViewMap.</button>
+<button style="float:left;" onclick="panToBB($count)">ViewMap</button>
 
 </div>
 NEWHTML;
