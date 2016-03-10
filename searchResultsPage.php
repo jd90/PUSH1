@@ -235,6 +235,7 @@ $locations;
 <form onsubmit="loadBB('map.php?bbname={$row[bbname]}')">
     <input type="submit" value="View on Map." />
 </form>
+<button onclick="loadBB('map.php?bbname={$row[bbname]}')">ViewMap</button>
 
 </div>
 NEWHTML;
