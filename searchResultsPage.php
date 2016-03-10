@@ -82,7 +82,7 @@ session_start();
             //alert(""+bbnameNum);
         var myLatlng = new google.maps.LatLng(markers[bbnameNum].getAttribute("lat"), markers[bbnameNum].getAttribute("lng"));
 
-        map.setZoom(14);
+        map.setZoom(13);
         map.panTo(myLatlng);
 
 
