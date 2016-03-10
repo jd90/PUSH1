@@ -82,7 +82,7 @@ session_start();
             //alert(""+bbnameNum);
         var myLatlng = new google.maps.LatLng(markers[2].getAttribute("lat"), markers[2].getAttribute("lng"));
 
-        map.setZoom(12);
+        map.setZoom(14);
         map.panTo(myLatlng);
 
 
@@ -237,7 +237,7 @@ $locations;
 
 <a href="Customerinfo.php"><p>BOOK</p></a>
 
-<button style="float:left;" onclick="panToBB($count)">ViewMap</button>
+<button style="float:left;" onclick="panToBB($count)">ViewMap.</button>
 
 </div>
 NEWHTML;
