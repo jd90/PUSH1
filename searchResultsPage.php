@@ -236,7 +236,7 @@ $locations;
 
 <a href="Customerinfo.php"><p>BOOK</p></a>
 
-<button style="float:left;" onclick="panToBB($count)">ViewMap</button>
+<button style="float:left;" onclick="panToBB($count)">ViewMap.</button>
 
 </div>
 NEWHTML;
