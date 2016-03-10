@@ -79,6 +79,7 @@ session_start();
 
         function panToBB(bbnameNum){
 
+            alert(""+bbnameNum);
         var myLatlng = new google.maps.LatLng(markers[2].getAttribute("lat"), markers[2].getAttribute("lng"));
 
         map.setZoom(12);
