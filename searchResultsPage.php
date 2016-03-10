@@ -85,8 +85,22 @@ session_start();
         map.setZoom(14);
         map.panTo(myLatlng);
 
+
+            var name = markers[bbnameNum].getAttribute("name");
+            var address = markers[bbnameNum].getAttribute("address");
+            var type = markers[bbnameNum].getAttribute("type");
+            var point = new google.maps.LatLng(
+                parseFloat(markers[bbnameNum].getAttribute("lat")),
+                parseFloat(markers[bbnameNum].getAttribute("lng")));
+            html = "<b>" + name + "</b> <br/>" + address;
+            var icon = customIcons[type] || {};
+            var markerPan = new google.maps.Marker({
+                map: map,
+                position: point,
+                icon: icon.icon});
+
             infoWindow.setContent(html);
-            infoWindow.open(map, markers[bbnameNum]);
+            infoWindow.open(map, markerPan);
 
         }
 
