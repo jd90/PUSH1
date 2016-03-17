@@ -420,6 +420,7 @@ body{
     border: 1px solid #666699;
     margin-top: 100px;
 
+    overflow:scroll;
 }
 
 h3{
