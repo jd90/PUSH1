@@ -22,15 +22,17 @@ try{
 
     $count;
 
+    $ownerid;
+
 foreach($st->fetchAll() as $row) {
 
     $count++;
 
-    $row[firstname];
+    $ownerid = $row[ownerid];
 
 }
     if($count>0){
-        echo "";
+        echo "".$ownerid;
 //<a href='Home.php'>Continue</a>
     }
     else{echo "success!";}
