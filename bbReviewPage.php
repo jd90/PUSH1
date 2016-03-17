@@ -140,7 +140,7 @@ session_start();
                     <td>{$row[email]}</td>
 
             </tr>
-            <tr><td><a href="RoomRegistration.php?bbname={$row[bbname]}&bbid={$row[bbname]}"><input type="submit" value="Add Room to this BB"></input></a></td></tr>
+            <tr><td><a href="RoomRegistration.php?bbname={$row[bbname]}&bbid={$row[bbid]}"><input type="submit" value="Add Room to this BB"></input></a></td></tr>
             </table>
 NEWHTML;
                 print($newhtml);
