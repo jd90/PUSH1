@@ -109,9 +109,6 @@ session_start();
             $longitude = $_POST['longitude'];
             $latitude =$_POST['latitude'];
 
-            '" . $ownerid . "','" . $bbname . "','" . $address . "','" . $addressline2 . "','" . $city . "','" . $telephone . "','" . $email . "','" . $longitude . "', '" . $latitude . "','" . $bbdescription . "','" . $region . "','" . $mobile . "', '" . $checkin . "', '" . $checkout . "', '" . $pets . "', '" . $postcode . "', '" . $imageurl . "'
-
-
 
 
             $conn = new PDO ("sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
