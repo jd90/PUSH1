@@ -265,7 +265,7 @@ session_start();
 </td>
 </tr>
 </table>
-    <p><a href="Customerinfo.html"><input type="submit" value="BOOK" /></a></p>
+    <p><a href="Customerinfo.php"><input type="submit" value="BOOK" /></a></p>
 
 <button style="float:left;" onclick="panToBB($count)">ViewMap</button>
 
