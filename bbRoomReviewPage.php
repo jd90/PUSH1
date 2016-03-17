@@ -116,7 +116,7 @@ session_start();
             <?php
             $email = $_SESSION['user'];
             if($_GET['bbid'] != null ){
-            $bbid2 = $_GET['bbid'];}
+            $bbid = $_GET['bbid'];}
             $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
             $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
             try{
