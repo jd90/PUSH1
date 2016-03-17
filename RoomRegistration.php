@@ -78,6 +78,7 @@ session_start();
         <?php
 
         $bb = $_GET['bbname'];
+        $bbid = $_GET['bbid'];
 
         $sesh = $_SESSION['user'];
         echo "<p>Add Room to <strong>".$bb;
@@ -109,7 +110,7 @@ session_start();
                             <tr>
 
                                 <td><label for="bbid">B&B ID: *</label></td>
-                                <td><input type="text" id="bbid" class="inputform" name="bbid" value="DB insert B&B ID read only" size="20" maxlength="10" readonly /></td>
+                                <td><input type="text" id="bbid" class="inputform" name="bbid" value="<?php echo"".$bbid ?>" size="20" maxlength="10" readonly /></td>
                                 <td><label for="price">Price: *</label></td>
                                 <td><input type="text" id="price" class="inputform" name="price" placeholder="Enter Price Per\Night" size="20" maxlength="10" required /></td>
 
