@@ -26,7 +26,7 @@ foreach($st->fetchAll() as $row) {
 
     $count++;
 
-    $row[firstname];
+    $ownerid = $row[ownerid];
 
 }
     if($count>0){
