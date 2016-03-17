@@ -1,8 +1,7 @@
 
-
 form {
 
-    color: black;
+    color: #666699;
     font-family: 'Roboto', sans-serif;
     font-size: 12PT;
 }
@@ -11,11 +10,6 @@ h1{
 
     font-size: 30px;
     color: white;
-}
-
-#mapView{
-
-    float: right;
 }
 
 .inputform
@@ -29,16 +23,16 @@ h1{
 }
 
 .table1{
-    border: 1px solid darkslategrey;
+    border: 1px solid #666699;
     padding: 25px;
     background-color: #f8f8ff;
     -moz-border-radius:10px;
     -webkit-border-radius: 10px;
     -khtml-border-radius: 10px;
     border-radius: 10px;
-    color: darkslategrey;
+    color: #666699;
     margin: 0%;
-    }
+}
 
 .table2{
     font-family: 'Roboto', sans-serif;
@@ -48,14 +42,14 @@ h1{
 }
 
 .table3{
-    border: 1px solid darkslategrey;
+    border: 1px solid #666699;
     padding: 25px;
     background-color: #f8f8ff;
     -moz-border-radius:10px;
     -webkit-border-radius: 10px;
     -khtml-border-radius: 10px;
     border-radius: 10px;
-    color: darkslategrey;
+    color: #666699;
     margin: 0%;
     margin-right: auto;
     margin-left: auto;
@@ -69,12 +63,54 @@ h1{
     -webkit-border-radius: 10px;
     -khtml-border-radius: 10px;
     border-radius: 10px;
-    color: darkslategrey;
+    color: #666699;
     margin-left: 5%;
     margin-right: auto;
     margin-left: auto;
 }
 
+.table5{
+    border: 1px solid orange;
+    padding: 25px;
+    background-color: snow;
+    -moz-border-radius:10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    color: #666699;
+    margin-left: 5%;
+    width: 600px;
+}
+
+.table6{
+    border: 1px solid orange;
+    padding: 25px;
+    background-color: #f8f8ff;
+    -moz-border-radius:10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    color: #666699;
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
+
+.tablejava td{
+
+    padding-right: 75px;
+}
+
+#textlink{
+
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: orange;
+    font-size: 15px;
+    float: right;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
 
 .tablesearch {
     padding: 90px;
@@ -118,14 +154,14 @@ h2{
 .resultdisplay{
     float: left;
     border-style: solid;
-    border-color: darkslategrey;
+    border-color: #666699;
 }
 
 .loader {
-    border: 16px solid darkslategrey;
+    border: 16px solid #666699;
     border-radius: 50%;
-    border-top: 16px solid darkslategrey;
-    border-bottom: 16px solid darkslategrey;
+    border-top: 16px solid #666699;
+    border-bottom: 16px solid #666699;
     width: 50px;
     height: 50px;
     -webkit-animation: spin 2s linear infinite;
@@ -155,7 +191,7 @@ h2{
     background-color: snow;
     font-family: 'Roboto', sans-serif;
     height: 80px;
-    color: darkslategrey;
+    color: #666699;
 
 }
 
@@ -201,7 +237,7 @@ button{
 }
 
 #content3{
-    
+
     background-image: url("assets/wallpaper.jpg");
     -moz-border-radius: 0px 0px 10px 10px;
     -webkit-border-radius: 0px 0px 10px 10px;
@@ -245,12 +281,24 @@ main{
 #img2{
 
     height: 150px;
-    border: 1px solid #666699;
+    border: 1px solid orange;
     -moz-border-radius:5px;
     -webkit-border-radius: 5px;
     -khtml-border-radius: 5px;
     border-radius: 5px;
 }
+
+#img3{
+
+
+    border: 1px solid orange;
+    -moz-border-radius:5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
 
 #spacer{
 
@@ -324,7 +372,7 @@ nav[role="sub"] ul li a{
 
 nav[role="sub"] li a:HOVER{
 
-    color:darkslategrey;
+    color: orange;
 }
 
 nav[role="sub2"] li a{
@@ -342,8 +390,9 @@ nav[role="sub2"] li a:HOVER{
 
 nav[role="main"] li a:HOVER{
     background-color: snow;
-    color: darkslategrey;
+    color: orange;
     padding: 10px;
+    transition: 0.4s;
 }
 
 #img{
@@ -522,3 +571,4 @@ div.panel.show {
 
     height: 200px;
 }
+
