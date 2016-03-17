@@ -166,10 +166,24 @@ NEWHTML;
 
 
 
+<section class="container" id="foot">
 
-<footer>
+    <div id="footernav">
+        <nav role="sub">
+            <ul>
+                <li><a href="SearchBB.php">Search</a></li>
+                <li><a href="OwnerSignIn.php">Member Area</a></li>
+                <li><a href="B&Bregistration.html">Register</a></li>
+                <li><a href="help.php#contactsection">Contact</a></li>
+                <li><a href="help.php#helpsection">Help</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="copyright">
+        <hr width="100%" size="1">
+        <p>Copyright. Team D Solutions.</p>
+    </div>
 
-    <p>Copyright. Team D Solutions.</p>
-</footer>
+</section>
 </body>
 </html>

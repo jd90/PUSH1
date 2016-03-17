@@ -276,21 +276,21 @@ NEWHTML;
 
 </section>
 
+
+
 <section class="container" id="foot">
 
     <div id="footernav">
         <nav role="sub">
             <ul>
-                <li><a href="B&Bregistration.php">Contact</a></li>
-                <li><a href="B&Bregistration.php">Register</a></li>
-                <li><a href="OwnerSignIn.php">Member Area</a></li>
                 <li><a href="SearchBB.php">Search</a></li>
+                <li><a href="OwnerSignIn.php">Member Area</a></li>
+                <li><a href="B&Bregistration.html">Register</a></li>
+                <li><a href="help.php#contactsection">Contact</a></li>
+                <li><a href="help.php#helpsection">Help</a></li>
             </ul>
         </nav>
     </div>
-
-
-
     <div id="copyright">
         <hr width="100%" size="1">
         <p>Copyright. Team D Solutions.</p>
@@ -300,84 +300,7 @@ NEWHTML;
 
 
 
-
 <script type="text/javascript">
-    /*
-
-
-    var customIcons = {
-        restaurant: {
-            icon: 'http://labs.google.com/ridefinder/images/mm_20_blue.png'
-        },
-        bar: {
-            icon: 'http://labs.google.com/ridefinder/images/mm_20_red.png'
-        }
-    };
-
-
-
-    function loadBB(mapreq) {
-        var map = new google.maps.Map(document.getElementById("map"), {
-            center: new google.maps.LatLng(55, -3),
-            zoom: 5,
-            mapTypeId: 'roadmap'
-        });
-        var infoWindow = new google.maps.InfoWindow;
-        // Change this depending on the name of your PHP file
-        downloadUrl(mapreq, function(data) {
-            var xml = data.responseXML;
-            markers = xml.documentElement.getElementsByTagName("marker");
-
-
-            for (var i = 0; i < markers.length; i++) {
-                var name = markers[i].getAttribute("name");
-                var address = markers[i].getAttribute("address");
-                var type = markers[i].getAttribute("type");
-                var point = new google.maps.LatLng(
-                    parseFloat(markers[i].getAttribute("lat")),
-                    parseFloat(markers[i].getAttribute("lng")));
-                var html = "<b>" + name + "</b> <br/>" + address;
-                var icon = customIcons[type] || {};
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: point,
-                    icon: icon.icon
-                });
-
-                var myLatlng = new google.maps.LatLng(markers[0].getAttribute("lat"), markers[0].getAttribute("lng"));
-
-                map.setZoom(15);
-                map.panTo(myLatlng);
-
-                bindInfoWindow(marker, map, infoWindow, html);
-            }
-
-        });
-    }
-
-    function bindInfoWindow(marker, map, infoWindow, html) {
-        google.maps.event.addListener(marker, 'click', function() {
-            infoWindow.setContent(html);
-            infoWindow.open(map, marker);
-        });
-    }
-    function downloadUrl(url, callback) {
-        var request = window.ActiveXObject ?
-            new ActiveXObject('Microsoft.XMLHTTP') :
-            new XMLHttpRequest;
-        request.onreadystatechange = function() {
-            if (request.readyState == 4) {
-                request.onreadystatechange = doNothing;
-                callback(request, request.status);
-            }
-        };
-        request.open('GET', url, true);
-        request.send(null);
-    }
-    function doNothing() {}
-
-    //]]>
-    **/
 </script>
 
 
