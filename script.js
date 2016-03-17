@@ -25,7 +25,7 @@ $(document).ready(function(){
 
                     if(result="username or password is wrong"){
                         $('#loader').remove();
-                    $("#result").html(result);
+                    $("#result").html("username or password is wrong");
                     }
                     else{
                         $('#loader').remove();
