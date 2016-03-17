@@ -141,7 +141,7 @@ session_start();
 
             </tr>
             <tr><td><a href="RoomRegistration.php?bbname={$row[bbname]}&bbid={$row[bbid]}"><input type="submit" value="Add Room to this BB"></input></a></td></tr>
-             <tr><td><a href="bbRoomReviewPage.php?bbname=bbid2={$row[bbid]}"><input type="submit" value="View Rooms"></input></a></td></tr>
+             <tr><td><a href="bbRoomReviewPage.php?bbid2={$row[bbid]}"><input type="submit" value="View Rooms"></input></a></td></tr>
             </table>
 NEWHTML;
                 print($newhtml);
