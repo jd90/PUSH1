@@ -74,6 +74,7 @@ session_start();
 
 
 
+
         <?php
 
         $bb = $_GET['bbname'];
@@ -85,13 +86,14 @@ session_start();
 
 
         ?>
-
-    </div>
+</div>
 </section>
 
 
 
-<section>
+
+<section class="container" id="content2">
+
 
 
     <form action="bbRoomReviewPage.php" method="POST">
@@ -104,84 +106,56 @@ session_start();
                 <td><select id="bbname" class="inputform" name="bbname">
                         <option value="<?php echo"".$bb ?>"><?php echo"".$bb ?></option></td>
 
-                <td>
-                    <label for="city">City: *</label></td>
-                <td><input id="city" type="text" class="inputform" name="city" placeholder="Enter City" size="30" maxlength="50" required /></td>
-
-                <td>
-                    <label for="city">Region: *</label></td>
-                <td><input id="city" type="text" class="inputform" name="city" placeholder="Enter City" size="30" maxlength="50" required /></td>
-
-
-            </tr>
-            <tr><td>
-                    <label for="address">Address: *</label></td>
-                <td><input id="address" type="text" class="inputform" name="address" placeholder=" Enter first line of your address" size="30" maxlength="50" required /></td>
-
-
-                <td>
-                    <label for="address2">Address Line 2: *</label></td>
-                <td><input id="address2" type="text" class="inputform" name="address2" placeholder=" Enter second line of your address" size="30" maxlength="50" required /></td>
-
-                <td>
-                    <label for="telephone">Telephone: *</label></td>
-                <td><input id="telephone" type="text" class="inputform" name="telephone" placeholder=" Enter your telephone number" size="20" maxlength="20" required /></td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="email">Email: *</label></td>
-                <td><input id="email" type="text" class="inputform" name="email" placeholder="email" size="30" maxlength="50" required /></td>
-                <td>
-                    <label for="bbdescription">B&B Description: *</label></td>
-                <td><input id="bbdescription" type="text" class="inputform" name="bbdescription" placeholder=" Enter a description of your B&B" size="30" maxlength="50" required /></td>
-
-
-                <td>
-                    <label for="roomdescription">Room Description: *</label></td>
-                <td><input id="roomdescription" type="text" class="inputform" name="roomdescription" placeholder=" Enter a description of your rooms" size="30" maxlength="50" required /></td>
-            </tr>
-
-            <tr><td>
-                    <label for="price">Price: *</label></td>
-                <td><input id="price" type="text" class="inputform" name="price" placeholder="Enter the price per night" required /></td>
-                <td>
-                    <label for="checkin">Check-in time: *</label></td>
-                <td><input id="checkin" type="text" class="inputform" name="check-in" placeholder="Enter the check-in time" required /></td>
-
-
-                <td>
-                    <label for="checkout">Check-out time: *</label></td>
-                <td><input id="checkout" type="text" class="inputform" name="check-out" placeholder="Enter the check-out time" required /></td>
-
-            </tr><tr><td>
-                    <label for="picture">Upload a picture: *</label></td>
-                <td><input id="picture" type="text" class="inputform" name="picture" required /></td>
-
-
-                <td>
-                    <label  for="pets">Pets Allowed: *</label></td>
-                <td><select id="pets" class="inputform" name="title">
-                        <option value="">Select Yes or No</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="6"><p><input id="submit" type="submit" value="Submit" class="submit" /></p></td>
-            </tr>
-        </table></form>
-
-
-</section>
 
 
 
-<section class="spacer" id="spacer">
+                            <tr><td class="small"><p>* Required Fields</p></td></tr>
+
+                            <tr>
+
+                                <td><label for="bbid">B&B ID: *</label></td>
+                                <td><input type="text" id="bbid" class="inputform" name="bbid" value="DB insert B&B ID read only" size="20" maxlength="10" readonly /></td>
+                                <td><label for="price">Price: *</label></td>
+                                <td><input type="text" id="price" class="inputform" name="price" placeholder="Enter Price Per\Night" size="20" maxlength="10" required /></td>
+
+                            </tr>
+                            <tr>
+                                <td><label for="roomname">Room Name: *</label></td>
+                                <td><input type="text" id="roomname" class="inputform" name="roomname" placeholder="Enter Room Name" size="20" maxlength="25" required /></td>
+
+                                <td>
+                                    <label for="nbrofpeople">Room Sleeps: *</label></td>
+                                <td><select class="inputform" id="nbrofpeople" name="nbrofpeople">
+                                        <option value="">Select Occupant Nbr</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td><label for="roomdescription">Room Description: *</label></td>
+                                <td><input type="text" id="roomdescription" class="inputform" name="roomdescription" placeholder="Enter Room Description" size="30" maxlength="50" required /></td>
+
+                                <td>
+                                    <label for="imageurl">Image URL: *</label></td>
+                                <td><input type="text" id="imageurl" class="inputform" name="imageurl" placeholder="Enter Image URL" size="30" maxlength="50" required /></td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="4"><p align="right" ><input id="submit" type="submit" value="Submit" class="submit" /></p></td>
+                            </tr>
+                        </table></form>
+
+                </section>
+                <section class="spacer" id="spacer">
 
 
-</section>
+                </section>
 
 <section class="container" id="featured">
     <div class="centre">
