@@ -243,34 +243,120 @@ NEWHTML;
 <body onload="init()">
 
 
-    <ul id="tabs">
-        <li><a href="#about">Regional Area's</a></li>
-        <li><a href="#advantages">Town's & City's</a></li>
-        <li><a href="#usage">Most Popular</a></li>
-    </ul>
+<ul id="tabs">
+    <li><a href="#regions">Regional Area's</a></li>
+    <li><a href="#cities">Town's & City's</a></li>
+    <li><a href="#areas">Most Popular</a></li>
+</ul>
 
-    <div class="tabContent" id="about">
+<div class="tabContent" id="regions">
 
-        <div>
-            <p>JavaScript tabs partition your Web page content into tabbed sections. Only one section at a time is visible.</p>
-            <p>The code is written in such a way that the page degrades gracefully in browsers that don't support JavaScript or CSS.</p>
-        </div>
+    <div>
+        <p>Looking for a B&B in a Region of the UK but not sure where to stay? Find all B&B's by Region...</p>
+        <p>
+
+        <table border="0" class="tablejava">
+            <tr>
+                <td>East</td>
+                <td>East Midlands</td>
+                <td>London</td>
+                <td>North East</td>
+            </tr>
+            <tr>
+                <td>North West</td>
+                <td>Northern Ireland</td>
+                <td>Scotland</td>
+                <td>South East</td>
+
+            </tr>
+            <tr>
+                <td>South West</td>
+                <td>Wales</td>
+                <td>West Midlands</td>
+                <td>Yorkshire and the Humber</td>
+
+
+            </tr>
+
+        </table>
+
+
+
+
+
+
     </div>
+</div>
 
-    <div class="tabContent" id="advantages">
+<div class="tabContent" id="cities">
 
-        <div>
-            <p>JavaScript tabs are great if your Web page contains a large amount of content.</p>
-            <p>They're also good for things like multi-step Web forms.</p>
-        </div>
+    <div>
+        <p>Looking for a B&B in a City of the UK but not sure where to stay? Find all B&B's by City...</p>
+        <p>
+
+        <table border="0" class="tablejava">
+            <tr>
+                <td>Aberdeen</td>
+                <td>Edinburgh</td>
+                <td>London</td>
+                <td>Glasgow</td>
+            </tr>
+            <tr>
+                <td>Dundee</td>
+                <td>Newcastle</td>
+                <td>Liverpool</td>
+                <td>Leeds</td>
+
+            </tr>
+            <tr>
+                <td>Manchester</td>
+                <td>Chester</td>
+                <td>York</td>
+                <td>Bristol</td>
+
+
+            </tr>
+
+        </table>
+
+
     </div>
+</div>
 
-    <div class="tabContent" id="usage">
+<div class="tabContent" id="areas">
 
-        <div>
-            <p>Click a tab to view the tab's content. Using tabs couldn't be easier!</p>
-        </div>
+    <div>
+        <p>Looking for a B&B in a Area of the UK but not sure where to stay? Find all B&B's by Area...</p>
+        <p>
+
+        <table border="0" class="tablejava">
+            <tr>
+                <td>Cornwall</td>
+                <td>Dorset</td>
+                <td>Devon</td>
+                <td>Berkshire</td>
+            </tr>
+            <tr>
+                <td>Cumbria</td>
+                <td>Derbyshire</td>
+                <td>Somerset</td>
+                <td>Loch Lomond</td>
+
+            </tr>
+            <tr>
+                <td>Loch Ness</td>
+                <td>Cairngorms</td>
+                <td>Ben Nevis</td>
+                <td>Isle of Skye</td>
+
+
+            </tr>
+
+        </table>
+
+
     </div>
+</div>
 
 
 <section class="spacer" id="spacer">
@@ -280,7 +366,10 @@ NEWHTML;
 
 
 
- <section class="container" id="featured">
+
+
+
+<section class="container" id="featured">
 <div class="centre">
 
     <p>Featured bed and breakfast destinations</p>
