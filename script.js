@@ -23,9 +23,9 @@ $(document).ready(function(){
                 cache: false,
                 success: function(result){
 
-                    if(result="success!"){
+                    if(result!="success!"){
                         $('#loader').remove();
-                    $("#result").html("username or password is wrong!");
+                    $("#result").html("username or password is wrong!!");
                     }
                     else{
                         $('#loader').remove();
