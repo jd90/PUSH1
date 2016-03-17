@@ -35,7 +35,7 @@ foreach($st->fetchAll() as $row) {
         echo "".$ownerid;
 //<a href='Home.php'>Continue</a>
     }
-    else{echo "success!";}
+    else{echo "username or password is wrong";}
 
 }
 catch(PDOException $e)
