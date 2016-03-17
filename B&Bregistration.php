@@ -89,7 +89,7 @@ session_start();
 
                 <tr>
                     <td><label for="ownerid">Owner ID: *</label></td>
-                    <td><input id="ownerid" type="text" class="inputform" name="ownerid" value="DB insert 'Owner ID' read only" size="20" maxlength="10" readonly /></td>
+                    <td><input id="ownerid" type="text" class="inputform" name="ownerid" value="<?php echo"".$_SESSION["ownerid"];?>" size="20" maxlength="10" readonly /></td>
                     <td><label for="region">Region: *</label></td>
                     <td><input id="region" type="text" class="inputform" name="region" placeholder="Enter Region" size="20" maxlength="30" required /></td>
                     <td><label for="bbdescription">B&B Description: *</label></td>
@@ -252,7 +252,7 @@ session_start();
             <ul>
                 <li><a href="SearchBB.php">Search</a></li>
                 <li><a href="OwnerSignIn.php">Member Area</a></li>
-                <li><a href="B&Bregistration.html">Register</a></li>
+                <li><a href="B&Bregistration.php">Register</a></li>
                 <li><a href="help.php#contactsection">Contact</a></li>
                 <li><a href="help.php#helpsection">Help</a></li>
             </ul>
