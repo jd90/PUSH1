@@ -23,7 +23,7 @@ $(document).ready(function(){
                 cache: false,
                 success: function(result){
 
-                    if(result!="success!"){
+                    if(result="username or password is wrong"){
                         $('#loader').remove();
                     $("#result").html(result);
                     }
@@ -33,6 +33,7 @@ $(document).ready(function(){
 
                         var form = $('<form action="http://thebbhubdotcom.azurewebsites.net/SearchBB.php" method="POST">' +
                             '<input hidden type="text" name="user" value="'+email+'" />' +
+                            '<input hidden type="text" name="ownerid" value="'+result+'" />' +
                             '</form>');
                         $('body').append(form);
                         form.submit();

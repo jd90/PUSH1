@@ -105,6 +105,8 @@ session_start();
         }
         if ($_POST['user'] != null) {
             $_SESSION["user"] = $_POST['user'];
+            $_SESSION["ownerid"] = $_POST['ownerid'];
+
         }
         if ($_SESSION["user"] != null) {
             echo "<p id='loginText'>Currently signed in as: " . $_SESSION["user"];

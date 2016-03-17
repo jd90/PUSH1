@@ -27,10 +27,11 @@ foreach($st->fetchAll() as $row) {
     $count++;
 
     $row[firstname];
+    $row[ownerid];
 
 }
     if($count>0){
-        echo "success!";
+        echo "ownerid";
 //<a href='Home.php'>Continue</a>
     }
     else{echo "username or password is wrong";}
