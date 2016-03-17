@@ -106,11 +106,6 @@ session_start();
                 <td><select id="bbname" class="inputform" name="bbname">
                         <option value="<?php echo"".$bb ?>"><?php echo"".$bb ?></option></td>
 
-
-
-
-                            <tr><td class="small"><p>* Required Fields</p></td></tr>
-
                             <tr>
 
                                 <td><label for="bbid">B&B ID: *</label></td>
