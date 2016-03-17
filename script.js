@@ -23,11 +23,7 @@ $(document).ready(function(){
                 cache: false,
                 success: function(result){
 
-                    if(result="username or password is wrong"){
-                        $('#loader').remove();
-                    $("#result").html(result);
-                    }
-                    else{
+                    if(result!="success!"){
                         $('#loader').remove();
                         alert("That's you signed in, chief!!");
 
@@ -38,6 +34,10 @@ $(document).ready(function(){
                         form.submit();
                         //$.session.set("user", ""+email);
                         //window.location.href = "http://bbhubapp.azurewebsites.net/Home.php";
+                    }
+                    else{
+                        $('#loader').remove();
+                        $("#result").html(result);
                     }
 
 
