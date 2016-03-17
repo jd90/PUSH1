@@ -123,10 +123,11 @@ session_start();
                     $newhtml =
                         <<<NEWHTML
 
-                       <table class="table1"> <tr>
-                   <td>{$row[roomname]}</td>
-                    <td id="bbname">{$row[roomdescription]}</td>
-                    <td>{$row[price]}</td>
+                       <table class="table1">
+                   <tr><td>{$row[roomname]}</td></tr>
+
+                    <tr><td id="bbname">{$row[roomdescription]}</td></tr>
+                    <tr><td>{$row[price]}</td>
 
             </tr>
             <td><input type="submit" value="Change Availability"></input></td></tr>
