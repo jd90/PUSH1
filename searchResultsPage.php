@@ -221,19 +221,20 @@ session_start();
 
         </div>
 
-        <div class="main">
+        <?php
+        $city = $_POST['location'];
+        $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
+        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+        try{
+            $st = $conn-> query("SELECT * FROM [B&B] WHERE [city] = '$city'");
 
+            $count=0;
+            $locations;
 
-            <?php
-            $city = $_POST['location'];
-            $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
-            $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-            try{
-                $st = $conn-> query("SELECT * FROM [B&B] WHERE [city] = '$city'");
-                foreach($st->fetchAll() as $row) {
-                    $newhtml =
-                        <<<NEWHTML
-                            <div class="table5">
+            foreach($st->fetchAll() as $row) {
+                $newhtml =
+                    <<<NEWHTML
+                        <div class="table5">
 <table border="0" cellpadding="5">
 <tr>
 <td><strong><img src="{$row[imageurl]}" id="img3"></strong></td>
@@ -265,28 +266,21 @@ session_start();
 </tr>
 </table>
     <p><a href="Customerinfo.html"><input type="submit" value="BOOK" /></a></p>
+
+<button style="float:left;" onclick="panToBB($count)">ViewMap</button>
+
 </div>
  <section class="spacer" id="spacer">
     </section>
 NEWHTML;
-
-            $locations[$count] = ("{$row[longitude]},{$row[latitude]}");
-            $count++;
-            print($newhtml);
-
+                print($newhtml);
+            }
         }
-    }
-    catch(PDOException $e)
-    {print"$e";}
-    ?>
+        catch(PDOException $e)
+        {print"$e";}
+        ?>
 
-
-</div>
-    </section>
-<section class="spacer" id="spacer">
-
-
-</section>
+    </div>
 
 
 
