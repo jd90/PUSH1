@@ -23,7 +23,7 @@ $(document).ready(function(){
                 cache: false,
                 success: function(result){
 
-                    if(result!="success!"){
+                    if(result=="username or password is wrong"){
                         $('#loader').remove();
                     $("#result").html("username or password is wrong!!");
                     }
