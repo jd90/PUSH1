@@ -274,6 +274,7 @@ session_start();
     </section>
 NEWHTML;
                 print($newhtml);
+                $count++;
             }
         }
         catch(PDOException $e)
