@@ -33,7 +33,7 @@ $(document).ready(function(){
 
                         var form = $('<form action="http://thebbhubdotcom.azurewebsites.net/SearchBB.php" method="POST">' +
                             '<input hidden type="text" name="user" value="'+email+'" />' +
-                            '<input hidden type="text" name="user" value="'+result+'" />' +
+                            '<input hidden type="text" name="ownerid" value="'+result+'" />' +
                             '</form>');
                         $('body').append(form);
                         form.submit();
