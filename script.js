@@ -25,6 +25,10 @@ $(document).ready(function(){
 
                     if(result!="success!"){
                         $('#loader').remove();
+                    $("#result").html("username or password is wrong");
+                    }
+                    else{
+                        $('#loader').remove();
                         alert("That's you signed in, chief!!");
 
                         var form = $('<form action="http://thebbhubdotcom.azurewebsites.net/SearchBB.php" method="POST">' +
@@ -34,10 +38,6 @@ $(document).ready(function(){
                         form.submit();
                         //$.session.set("user", ""+email);
                         //window.location.href = "http://bbhubapp.azurewebsites.net/Home.php";
-                    }
-                    else{
-                        $('#loader').remove();
-                        $("#result").html(result);
                     }
 
 

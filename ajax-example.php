@@ -30,10 +30,10 @@ foreach($st->fetchAll() as $row) {
 
 }
     if($count>0){
-        echo "success!";
+        echo "";
 //<a href='Home.php'>Continue</a>
     }
-    else{echo "username or password is wrong";}
+    else{echo "success!";}
 
 }
 catch(PDOException $e)
