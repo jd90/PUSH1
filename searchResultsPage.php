@@ -221,41 +221,53 @@ session_start();
 
         </div>
 
-
-    <?php
-
-    $city = $_POST['location'];
-    echo "<p>You searched for ".$city.". Results are ordered by ascending price</p>";
-    $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
-    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    try{
-        //ORDER BY [price]<p id="price"><strong>£{$row[price]} Per Night</strong></p>
-        $st = $conn-> query("SELECT * FROM [B&B] WHERE [city] = '$city'");
-
-$count=0;
-$locations;
-        foreach($st->fetchAll() as $row) {
-            $newhtml =
-                <<<NEWHTML
+        <div class="main">
 
 
-
-                    <div class="table4" id="{$count}">
-
-    <p id="bbname"><strong>{$row[bbname]}</strong></p>
-    <p id="email"><strong>{$row[email]}</strong></p>
-
-    <p id="address"><strong>{$row[address]}</strong></p>
-    <p id="long"><strong>{$row[longitude]}</strong></p>
-    <p id="lat"><strong>{$row[latitude]}</strong></p>
-
-
-
-<a href="Customerinfo.php"><p>BOOK</p></a>
-
-<button style="float:left;" onclick="panToBB($count)">ViewMap</button>
-
+            <?php
+            $city = $_POST['location'];
+            $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
+            $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+            try{
+                $st = $conn-> query("SELECT * FROM [B&B] WHERE [city] = '$city'");
+                foreach($st->fetchAll() as $row) {
+                    $newhtml =
+                        <<<NEWHTML
+                            <div class="table5">
+<table border="0" cellpadding="5">
+<tr>
+<td><strong><img src="{$row[imageurl]}" id="img3"></strong></td>
+<td>
+<table border="0" cellpadding="5">
+<tr>
+<td colspan="2">B&B Name: <strong>{$row[bbname]}</strong></td>
+</tr>
+<tr>
+<td colspan="2">B&B Description: <strong>{$row[bbdescription]}</strong></td>
+</tr>
+<tr>
+<td colspan="2">Address: <strong>{$row[address]}</strong></td>
+</tr>
+<tr>
+<td>Location: <strong>{$row[city]}</strong></td>
+<td>Postcode: <strong>{$row[postcode]}</strong></td>
+</tr>
+<tr>
+<td>Check-in: <strong>{$row[checkin]}</strong></td>
+<td>Check-out: <strong>{$row[checkout]}</strong></td>
+</tr>
+<tr>
+<td>Pets allowed: <strong>{$row[pets]}</strong></td>
+</tr>
+</h6>
+</table>
+</td>
+</tr>
+</table>
+    <p><a href="Customerinfo.html"><input type="submit" value="BOOK" /></a></p>
 </div>
+ <section class="spacer" id="spacer">
+    </section>
 NEWHTML;
 
             $locations[$count] = ("{$row[longitude]},{$row[latitude]}");
