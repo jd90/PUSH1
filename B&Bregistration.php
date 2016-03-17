@@ -88,12 +88,12 @@ session_start();
                 <tr><td colspan="3"><p>* Required Fields</p></td>
 
                 <tr>
-                    <label hidden for="ownerid">Owner ID: *</label>
-                    <input hidden id="ownerid" type="text" class="inputform" name="ownerid" value="<?php echo"".$_SESSION['ownerid'];?>" size="20" maxlength="10" readonly />
                     <td><label for="region">Region: *</label></td>
                     <td><input id="region" type="text" class="inputform" name="region" placeholder="Enter Region" size="20" maxlength="30" required /></td>
                     <td><label for="bbdescription">B&B Description: *</label></td>
                     <td><input id="bbdescription" type="text" class="inputform" name="bbdescription" placeholder="Enter B&B Description" size="30" maxlength="50" required /></td>
+                    <td><label hidden for="ownerid">Owner ID: *</label></td>
+                    <td><input hidden id="ownerid" type="text" class="inputform" name="ownerid" value="<?php echo"".$_SESSION['ownerid'];?>" size="20" maxlength="10" readonly /></td>
                 </tr>
                 <tr>
                     <td><label for="bbname">B&B Name: *</label></td>
