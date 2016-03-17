@@ -229,7 +229,7 @@ session_start();
     $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     try{
-        //ORDER BY [price]
+        //ORDER BY [price]<p id="price"><strong>£{$row[price]} Per Night</strong></p>
         $st = $conn-> query("SELECT * FROM [B&B] WHERE [city] = '$city'");
 
 $count=0;
@@ -244,7 +244,7 @@ $locations;
 
     <p id="bbname"><strong>{$row[bbname]}</strong></p>
     <p id="email"><strong>{$row[email]}</strong></p>
-    <p id="price"><strong>£{$row[price]} Per Night</strong></p>
+
     <p id="address"><strong>{$row[address]}</strong></p>
     <p id="long"><strong>{$row[longitude]}</strong></p>
     <p id="lat"><strong>{$row[latitude]}</strong></p>
