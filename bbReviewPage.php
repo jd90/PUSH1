@@ -85,25 +85,39 @@ session_start();
          * Date: 25/02/2016
          * Time: 13:45
          */
+
+
+
         if($_POST['bbname']!= null) {
-            $owneremail = $_SESSION['user'];
+            $email = $_SESSION['user'];
             //$ownerid= $_POST['ownerid'];   [ownerid] '".$ownerid."',
             $bbname = $_POST['bbname'];
             $address = $_POST['address'];
+            $addressline2 =$_POST['address2'];
             $city = $_POST['city'];
             $telephone = $_POST['telephone'];
-            $email = $_POST['email'];
+            $mobile = $_POST['mobile'];
+
             $bbdescription = $_POST['bbdescription'];
-            $roomdescription = $_POST['roomdescription'];
-            $price = $_POST['price'];
             $checkin = $_POST['checkin'];
             $checkout = $_POST['checkout'];
-            $picture =$_POST['picture'];
+            $imageurl =$_POST['picture'];
             $pets = $_POST['pets'];
+            $ownerid = $_POST['ownerid'];
+            $region = $_POST['region'];
+            $postcode = $_POST['postcode'];
+            $longitude = $_POST['longitude'];
+            $latitude =$_POST['latitude'];
+
+            '" . $ownerid . "','" . $bbname . "','" . $address . "','" . $addressline2 . "','" . $city . "','" . $telephone . "','" . $email . "','" . $longitude . "', '" . $latitude . "','" . $bbdescription . "','" . $region . "','" . $mobile . "', '" . $checkin . "', '" . $checkout . "', '" . $pets . "', '" . $postcode . "', '" . $imageurl . "'
+
+
+
+
             $conn = new PDO ("sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             try {
-                $st1 = "INSERT INTO [B&B] ([bbname], [address], [city], [telephone], [email], [price], [checkin], [checkout]) VALUES ('" . $bbname . "', '" . $address . "', '" . $city . "', '" . $telephone . "', '" . $owneremail . "', '" . $price . "', '" . $checkin . "', '" . $checkout . "')";
+                $st1 = "INSERT INTO [B&B] ([ownerid], [bbname], [address],[addressline2], [city], [telephone], [email], [longitude], [latitude], [bbdescription], [region], [mobile], [checkin], [checkout], [pets], [postcode], [imageurl]) VALUES ('" . $ownerid . "','" . $bbname . "','" . $address . "','" . $addressline2 . "','" . $city . "','" . $telephone . "','" . $email . "','" . $longitude . "', '" . $latitude . "','" . $bbdescription . "','" . $region . "','" . $mobile . "', '" . $checkin . "', '" . $checkout . "', '" . $pets . "', '" . $postcode . "', '" . $imageurl . "')";
                 $conn->exec($st1);
             } catch (PDOException $e) {
                 print"$e";
