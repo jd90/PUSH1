@@ -125,7 +125,7 @@ session_start();
 
                        <table class="table1"> <tr>
                    <td>{$row[roomname]}</td>
-                    <td id="bbname">{$row[$roomdescription]}</td>
+                    <td id="bbname">{$row[roomdescription]}</td>
                     <td>{$row[price]}</td>
 
             </tr>
