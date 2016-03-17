@@ -75,6 +75,8 @@ session_start();
     </div>
 </section>
 
+
+
 <section class="container" id="content3">
 
    <table class='table2'>
@@ -174,7 +176,10 @@ HTMLPAGE;
 
 
         </div>
-<section class="container" id="navigation">
+</section>
+
+
+    <section class="container" id="navigation">
     <div>
         <nav role="main">
             <ul>
@@ -187,6 +192,9 @@ HTMLPAGE;
         </nav>
     </div>
 </section>
+
+
+
 <section class="container" id="content3">
 
 
