@@ -80,93 +80,79 @@ session_start();
 <section>
 
 
-    <form action="bbReviewPage.php" method="POST">
-
-        <table class="table3">
-            <tr><td colspan="3"><p>* Required Fields</p></td>
-
-            <tr>
-                <td><label for="bbname">B&B Name: *</label></td>
-                <td><input id="bbname" type="text" class="inputform" name="bbname" placeholder="Enter your B&B Name" required /></td>
-
-                <td>
-                    <label for="city">City: *</label></td>
-                <td><input id="city" type="text" class="inputform" name="city" placeholder="Enter City" size="30" maxlength="50" required /></td>
-
-                <td>
-                    <label for="city">Region: *</label></td>
-                <td><input id="city" type="text" class="inputform" name="city" placeholder="Enter City" size="30" maxlength="50" required /></td>
 
 
-            </tr>
-            <tr><td>
-                    <label for="address">Address: *</label></td>
-                <td><input id="address" type="text" class="inputform" name="address" placeholder=" Enter first line of your address" size="30" maxlength="50" required /></td>
+        <form>
+
+            <table class="table3">
+                <tr><td colspan="3"><p>* Required Fields</p></td>
+
+                <tr>
+                    <td><label for="ownerid">Owner ID: *</label></td>
+                    <td><input id="ownerid" type="text" class="inputform" name="ownerid" value="DB insert 'Owner ID' read only" size="20" maxlength="10" readonly /></td>
+                    <td><label for="region">Region: *</label></td>
+                    <td><input id="region" type="text" class="inputform" name="region" placeholder="Enter Region" size="20" maxlength="30" required /></td>
+                    <td><label for="bbdescription">B&B Description: *</label></td>
+                    <td><input id="bbdescription" type="text" class="inputform" name="bbdescription" placeholder="Enter B&B Description" size="30" maxlength="50" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="bbname">B&B Name: *</label></td>
+                    <td><input id="bbname" type="text" class="inputform" name="bbname" placeholder="Enter B&B Name" size="20" maxlength="30" required /></td>
+                    <td><label for="telephone">Telephone: *</label></td>
+                    <td><input id="telephone" type="text" class="inputform" name="telephone" placeholder="Enter your Telephone Number" size="20" maxlength="20" required /></td>
+                    <td><label for="picture">Image URL: *</label></td>
+                    <td><input id="picture" type="text" class="inputform" name="picture" placeholder="Enter Image URL" size="30" maxlength="250" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address: *</label></td>
+                    <td><input id="address" type="text" class="inputform" name="address" placeholder="Enter the first line of the Address" size="30" maxlength="50" required /></td>
+                    <td><label for="mobile">Mobile: *</label></td>
+                    <td><input id="mobile" type="text" class="inputform" name="mobile" placeholder="Enter your Mobile Number" size="20" maxlength="20" required /></td>
+                    <td><label for="checkin">Check-in Time: *</label></td>
+                    <td><input id="checkin" type="text" class="inputform" name="checkin" placeholder="Enter the Check-in Time" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="address2">Address Line 2: *</label></td>
+                    <td><input id="address2" type="text" class="inputform" name="address2" placeholder="Enter the second line of the Address" size="30" maxlength="50" required /></td>
+                    <td><label for="email">Email: *</label></td>
+                    <td><input id="email" type="text" class="inputform" name="email" placeholder="Enter you Email Address" size="30" maxlength="50" required /></td>
+                    <td><label for="checkout">Check-out Time: *</label></td>
+                    <td><input id="checkout" type="text" class="inputform" name="checkout" placeholder="Enter the Check-out Time" size="20" maxlength="10" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="postcode">Postcode: *</label></td>
+                    <td><input id="postcode" type="text" class="inputform" name="postcode" placeholder="Enter the Postcode" size="20" maxlength="8" required /></td>
+                    <td><label for="latitude">Latitude: *</label></td>
+                    <td><input id="latitude" type="text" class="inputform" name="latitude" placeholder="Enter the Latitude of B&B" size="20" maxlength="20" required /></td>
+                    <td><label  for="pets">Pets Allowed: *</label></td>
+                    <td><select id="pets" class="inputform" name="pets">
+                            <option value="">Select Yes or No</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="city">City: *</label></td>
+                    <td><input id="city" type="text" class="inputform" name="city" placeholder=" Enter City" size="20" maxlength="20" required /></td>
+                    <td><label for="longitude">Longitude: *</label></td>
+                    <td><input id="longitude" type="text" class="inputform" name="longitude" placeholder="Enter Longitude of B&B" size="20" maxlength="20" required /></td>
+                </tr>
+                <tr>
+                    <td colspan="6"><p><input id="submit" type="submit" value="Submit" class="submit" /></p></td>
+                </tr>
+
+            </table></form>
 
 
-                <td>
-                    <label for="address2">Address Line 2: *</label></td>
-                <td><input id="address2" type="text" class="inputform" name="address2" placeholder=" Enter second line of your address" size="30" maxlength="50" required /></td>
-
-                <td>
-                    <label for="telephone">Telephone: *</label></td>
-                <td><input id="telephone" type="text" class="inputform" name="telephone" placeholder=" Enter your telephone number" size="20" maxlength="20" required /></td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="email">Email: *</label></td>
-                <td><input id="email" type="text" class="inputform" name="email" placeholder="email" size="30" maxlength="50" required /></td>
-                <td>
-                    <label for="bbdescription">B&B Description: *</label></td>
-                <td><input id="bbdescription" type="text" class="inputform" name="bbdescription" placeholder=" Enter a description of your B&B" size="30" maxlength="50" required /></td>
-
-
-                <td>
-                    <label for="roomdescription">Room Description: *</label></td>
-                <td><input id="roomdescription" type="text" class="inputform" name="roomdescription" placeholder=" Enter a description of your rooms" size="30" maxlength="50" required /></td>
-            </tr>
-
-            <tr><td>
-                    <label for="price">Price: *</label></td>
-                <td><input id="price" type="text" class="inputform" name="price" placeholder="Enter the price per night" required /></td>
-                <td>
-                    <label for="checkin">Check-in time: *</label></td>
-                <td><input id="checkin" type="text" class="inputform" name="check-in" placeholder="Enter the check-in time" required /></td>
-
-
-                <td>
-                    <label for="checkout">Check-out time: *</label></td>
-                <td><input id="checkout" type="text" class="inputform" name="check-out" placeholder="Enter the check-out time" required /></td>
-
-            </tr><tr><td>
-                    <label for="picture">Upload a picture: *</label></td>
-                <td><input id="picture" type="text" class="inputform" name="picture" required /></td>
-
-
-                <td>
-                    <label  for="pets">Pets Allowed: *</label></td>
-                <td><select id="pets" class="inputform" name="title">
-                        <option value="">Select Yes or No</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="6"><p><input id="submit" type="submit" value="Submit" class="submit" /></p></td>
-            </tr>
-        </table></form>
-
-
-</section>
+    </section>
 
 
 
-<section class="spacer" id="spacer">
+    <section class="spacer" id="spacer">
 
 
-</section>
+    </section>
 
 <section class="container" id="featured">
     <div class="centre">
