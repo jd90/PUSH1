@@ -5,7 +5,7 @@ session_start();
 
 
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html>
 <head>
     <meta charset="UTF-8">
     <link rel="icon"
@@ -119,7 +119,7 @@ session_start();
         ?>
         <script>
             function logout() {
-                window.location = "SearchBB.php?value=logout";
+                window.location = "SearchBB.php";
             }
         </script>
     </div>
@@ -221,7 +221,7 @@ NEWHTML;
            <tr>
                <td colspan="4">
 
-              <a href="searchResultsPage.php"><input id="submit" class="submit" type="submit" value="Search"  /></a></td>
+              <a href="searchResultsPage.php"><input class="btn3" type="submit" value="SEARCH"  /></a></td>
           </tr>
       </table>
     </form>
@@ -387,14 +387,19 @@ NEWHTML;
     <nav role="sub2">
     <img src="assets/london.jpg" id="img2">
     <p>London, England</p>
-    <p><li><strong><a href="#">click to view</a></strong></li></p>
+
+        <form action="searchResultsPage.php" method="POST">
+            <input hidden name="location" value='london'>
+            <button class="btn" type="submit" >Click to View</button>
+        </form><p>&nbsp;</p>
+
     <img src="assets/edinburgh.jpg" id="img2">
     <p>Edinburgh, Scotland</p>
         <form action="searchResultsPage.php" method="POST">
             <input hidden name="location" value='edinburgh'>
-            <button type="submit" >Click to View.</button>
+            <button class="btn" type="submit" >Click to View</button>
         </form>
-    <p><li><strong><a href="#">click to view</a></strong></li></p>
+
         </nav>
 
 
@@ -406,16 +411,16 @@ NEWHTML;
         <p>Glasgow, Scotland</p>
             <form action="searchResultsPage.php" method="POST">
                 <input hidden name="location" value='glasgow'>
-                <button type="submit" >Click to View.</button>
-            </form>
-        <p><li><strong><a href="#">click to view</a></strong></li></p>
+                <button class="btn" type="submit" >Click to View</button>
+            </form><p>&nbsp;</p>
+
         <img src="assets/Aberdeen.jpg" id="img2">
         <p>Aberdeen, Scotland</p>
             <form action="searchResultsPage.php" method="POST">
                 <input hidden name="location" value='aberdeen'>
-                <button type="submit" >Click to View.</button>
+                <button class="btn" type="submit" >Click to View</button>
             </form>
-        <p><li><strong><a href="#">click to view</a></strong></li></p>
+
             </nav>
     </section>
 
@@ -423,14 +428,17 @@ NEWHTML;
         <nav role="sub2">
         <img src="assets/dundee.jpeg" id="img2">
         <p>Dundee, Scotland</p>
-        <p><li><strong><a href="#">click to view</a></strong></li></p>
-        <img src="assets/manchester.jpg" id="img2">
+            <form action="searchResultsPage.php" method="POST">
+                <input hidden name="location" value='dundee'>
+                <button class="btn" type="submit" >Click to View</button>
+            </form><p>&nbsp;</p>
+            <img src="assets/manchester.jpg" id="img2">
         <p>Manchester, England</p>
             <form action="searchResultsPage.php" method="POST">
                 <input hidden name="location" value='manchester'>
-                <button type="submit" >Click to View.</button>
+                <button class="btn" type="submit" >Click to View</button>
             </form>
-        <p><li><strong><a href="#">click to view</a></strong></li></p>
+
         </nav>
     </section>
 

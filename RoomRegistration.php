@@ -41,7 +41,7 @@ session_start();
         <script>
             function logout() {
 
-                window.location = "SearchBB.php?value=logout";
+                window.location = "SearchBB.php";
             }
         </script>
 
@@ -81,8 +81,8 @@ session_start();
         $bbid = $_GET['bbid'];
 
         $sesh = $_SESSION['user'];
-        echo "<p>Add Room to <strong>".$bb;
-        echo"</strong></p>"
+        echo "<p>Want to Add a Room to <strong>".$bb;
+        echo"?</strong></p>"
 
 
 
@@ -101,57 +101,116 @@ session_start();
 
         <table class="table3">
             <tr><td colspan="3"><p>* Required Fields</p></td>
-
+                </tr>
             <tr>
                 <td><label for="bbname">B&B Name: *</label></td>
-                <td><select id="bbname" class="inputform" name="bbname">
-                        <option value="<?php echo"".$bb ?>"><?php echo"".$bb ?></option></td>
-
-                            <tr>
-
-                                <td hidden><label for="bbid">B&B ID: *</label></td>
-                                <td hidden><input type="text" id="bbid" class="inputform" name="bbid" value="<?php echo"".$bbid ?>" size="20" maxlength="10" readonly /></td>
-                                <td><label for="price">Price: *</label></td>
-                                <td><input type="text" id="price" class="inputform" name="price" placeholder="Enter Price Per\Night" size="20" maxlength="10" required /></td>
-
-                            </tr>
-                            <tr>
-                                <td><label for="roomname">Room Name: *</label></td>
-                                <td><input type="text" id="roomname" class="inputform" name="roomname" placeholder="Enter Room Name" size="20" maxlength="25" required /></td>
-
-                                <td>
-                                    <label for="nbrofpeople">Room Sleeps: *</label></td>
-                                <td><select class="inputform" id="nbrofpeople" name="nbrofpeople">
-                                        <option value="">Select Occupant Nbr</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-
-                                <td><label for="roomdescription">Room Description: *</label></td>
-                                <td><input type="text" id="roomdescription" class="inputform" name="roomdescription" placeholder="Enter Room Description" size="30" maxlength="50" required /></td>
-
-                                <td>
-                                    <label for="imageurl">Image URL: *</label></td>
-                                <td><input type="text" id="imageurl" class="inputform" name="imageurl" placeholder="Enter Image URL" size="30" maxlength="50" required /></td>
-
-                            </tr>
-                            <tr>
-                                <td colspan="4"><p align="right" ><input id="submit" type="submit" value="Submit" class="submit" /></p></td>
-                            </tr>
-                        </table></form>
+                <td><select id="bbname" class="inputform" name="bbname"><option value="<?php echo"".$bb ?>"><?php echo"".$bb ?></option></td>
+                <td><label for="nbrofpeople">Room Sleeps: *</label></td>
+                <td><select class="inputform" id="nbrofpeople" name="nbrofpeople">
+                        <option value="">Room Capacity</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="roomname">Room Name: *</label></td>
+                <td><input type="text" id="roomname" class="inputform" name="roomname" placeholder="Enter Room Name" size="20" maxlength="25" required /></td>
+                <td><label for="roomtype">Room Type: *</label></td>
+                <td><select class="inputform" id="roomtype" name="roomtype">
+                        <option value="">Room Type</option>
+                        <option value="single">Single Room</option>
+                        <option value="double">Double Room</option>
+                        <option value="family">Family Room</option>
+                    </select>
+                </td>
+                     </tr>
+            <tr>
+                <td><label for="roomdescription">Room Description: *</label></td>
+                <td><input type="text" id="roomdescription" class="inputform" name="roomdescription" placeholder="Enter Room Description" size="30" maxlength="50" required /></td>
+                <td><label for="en-suite">En-Suite: *</label></td>
+                <td><select class="inputform" id="en-suite" name="en-suite">
+                        <option value="">En-Suite</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+                      </tr>
+            <tr>
+                <td><label for="price">Price: *</label></td>
+                <td><input type="text" id="price" class="inputform" name="price" placeholder="Enter Price Per Night" size="20" maxlength="10" required /></td>
+                <td><label for="imageurl">Image URL: *</label></td>
+                <td><input type="text" id="imageurl" class="inputform" name="imageurl" placeholder="Enter Image URL" size="30" maxlength="50" required /></td>
+                <td hidden><label for="bbid">B&B ID: *</label></td>
+                <td hidden><input type="text" id="bbid" class="inputform" name="bbid" value="<?php echo"".$bbid ?>" size="20" maxlength="10" readonly /></td>
+                </tr>
+            <tr>
+                <td colspan="4"><p><input type="submit" value="Submit" class="btn3" /></p></td>
+                </tr>
+        </table></form>
 
                 </section>
                 <section class="spacer" id="spacer">
 
 
                 </section>
+
+<section class="container" id="featured">
+    <div class="centre">
+
+        <p>Want to add more images?</p>
+    </div>
+</section>
+
+
+<section class="container" id="content2">
+
+
+
+    <form action="bbRoomReviewPage.php" method="POST">
+
+        <table class="table3">
+
+            <tr>
+                <td><label for="bbname">B&B Name: *</label></td>
+                <td><select id="bbname" class="inputform" name="bbname"><option value="<?php echo"".$bb ?>"><?php echo"".$bb ?></option></td>
+                </tr>
+            <tr>
+                <td><label for="imageurl">1st Image URL: *</label></td>
+                <td><input type="text" id="imageurl" class="inputform" name="imageurl" placeholder="Enter Image URL" size="30" maxlength="50" required /></td>
+                <td><label for="imageurl">4th Image URL: *</label></td>
+                <td><input type="text" id="imageurl" class="inputform" name="imageurl" placeholder="Enter Image URL" size="30" maxlength="50" required /></td>
+            </tr>
+            <tr>
+                <td><label for="imageurl">2nd Image URL: *</label></td>
+                <td><input type="text" id="imageurl" class="inputform" name="imageurl" placeholder="Enter Image URL" size="30" maxlength="50" required /></td>
+                <td><label for="imageurl">5th Image URL: *</label></td>
+                <td><input type="text" id="imageurl" class="inputform" name="imageurl" placeholder="Enter Image URL" size="30" maxlength="50" required /></td>
+            </tr>
+            <tr>
+                <td><label for="imageurl">3rd Image URL: *</label></td>
+                <td><input type="text" id="imageurl" class="inputform" name="imageurl" placeholder="Enter Image URL" size="30" maxlength="50" required /></td>
+                <td><label for="imageurl">6th Image URL: *</label></td>
+                <td><input type="text" id="imageurl" class="inputform" name="imageurl" placeholder="Enter Image URL" size="30" maxlength="50" required /></td>
+                <td hidden><label for="bbid">B&B ID: *</label></td>
+                <td hidden><input type="text" id="bbid" class="inputform" name="bbid" value="<?php echo"".$bbid ?>" size="20" maxlength="10" readonly /></td>
+            </tr>
+            <tr>
+                <td colspan="4"><p><input type="submit" value="Submit" class="btn3" /></p></td>
+            </tr>
+        </table></form>
+
+</section>
+<section class="spacer" id="spacer">
+
+
+</section>
+
+
 
 <section class="container" id="featured">
     <div class="centre">

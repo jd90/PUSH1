@@ -44,7 +44,7 @@ session_start();
     <script>
         function logout() {
 
-            window.location = "SearchBB.php?value=logout";
+            window.location = "SearchBB.php";
         }
     </script>
 
@@ -86,17 +86,17 @@ session_start();
 
             <tr><td>
                 <label for='email'>Email: *</label></td>
-                <td><input type='text' class='inputform' id='email' name='email' placeholder='email' size='30' maxlength='50' required /></td>
+                <td><input type='text' class='inputform' id='email' name='email' placeholder='Enter Email' size='30' maxlength='50' required /></td>
             </tr>
             <tr>
                 <td><label for='password'>Password: *</label></td>
-                <td>    <input type='password' class='inputform' id='password' name='password' placeholder='enter password' required>
+                <td>    <input type='password' class='inputform' id='password' name='password' placeholder='Enter password' size='20' maxlength='30' required>
                 </td>
             </tr>
 
-    <tr><td></td><td><input class="submit" id='submit' type='button' value='Sign In'></td></tr>
+    <tr><td></td><td><input class="btn3" id='submit' type='button' value='Sign In'></td></tr>
     <form class='table1' id='myForm' name = 'myForm' action='OwnerRegistration.php' >
-    <tr><td></td><td><input class="submit" id='submit' type = 'submit' value = 'Register'/></td></tr>
+    <tr><td></td><td><input class="btn3" id='submit' type = 'submit' value = 'Register'/></td></tr>
 
 
 
@@ -207,8 +207,8 @@ HTMLPAGE;
 
     <tr><td>You are on the owner's review page!</td></tr>
 
-    <tr><td></td><td><a href="B&Bregistration.php"><input type = 'submit' value = 'Add B&B'/></a></td></tr>
-    <tr><td></td><td><a href="bbReviewPage.php"><input type = 'submit' value = 'Review Your B&Bs'/></a></td></tr>
+    <tr><td></td><td><a href="B&Bregistration.php"><input class="btn2" type = 'submit' value = 'Add B&B'/></a></td></tr>
+    <tr><td></td><td><a href="bbReviewPage.php"><input class="btn2" type = 'submit' value = 'Review Your B&Bs'/></a></td></tr>
 
 
 

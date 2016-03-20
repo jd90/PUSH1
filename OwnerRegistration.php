@@ -34,7 +34,7 @@ session_start();
     <script>
         function logout() {
 
-            window.location = "SearchBB.php?value=logout";
+            window.location = "SearchBB.php";
         }
     </script>
 
@@ -145,7 +145,7 @@ session_start();
                     </tr>
 
                     <tr><td></td>
-                        <td><p><input id="submit" type="submit" value="Submit" class="submit" /></p></td>
+                        <td><p><input type="submit" value="Submit" class="btn3" /></p></td>
                     </tr>
 
                     <tr><td></td>

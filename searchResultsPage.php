@@ -7,7 +7,7 @@ session_start();
 
 
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html>
 <head>
     <link rel="icon"
           type="image/png"
@@ -17,7 +17,7 @@ session_start();
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
      <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <title>PHP/MySQL & Google Maps Example</title>
+    <title>Search Results: theB&Bhub</title>
     <script src="https://maps.googleapis.com/maps/api/js"
             type="text/javascript"></script>
     <script type="text/javascript">
@@ -30,9 +30,6 @@ session_start();
                 icon: 'http://labs.google.com/ridefinder/images/mm_20_red.png'
             }
         };
-
-
-
 
         function load(mapreq) {
 
@@ -149,7 +146,7 @@ session_start();
     </div>
     <script>
         function logout() {
-            window.location = "SearchBB.php?value=logout";
+            window.location = "SearchBB.php";
         }
     </script>
 </section>
@@ -235,16 +232,13 @@ session_start();
                 $newhtml =
                     <<<NEWHTML
                         <div class="table5">
-<table border="0" cellpadding="5">
+<a href="Customerinfo.php" id="nodec"><table border="0" cellpadding="5">
 <tr>
-<td><strong><img class="bbimages" src="{$row[imageurl]}" id="img3"></strong></td>
+<td><strong><img src="{$row[imageurl]}" id="img3"></strong></td>
 <td>
 <table border="0" cellpadding="5">
 <tr>
 <td colspan="2">B&B Name: <strong>{$row[bbname]}</strong></td>
-</tr>
-<tr>
-<td colspan="2">B&B Description: <strong>{$row[bbdescription]}</strong></td>
 </tr>
 <tr>
 <td colspan="2">Address: <strong>{$row[address]}</strong></td>
@@ -264,14 +258,12 @@ session_start();
 </table>
 </td>
 </tr>
-</table>
-    <p><a href="Customerinfo.php"><input type="submit" value="BOOK" /></a></p>
+</table></a>
 
-<button style="float:left;" onclick="panToBB($count)">ViewMap</button>
+<button style="float:right;" class="btn" onclick="panToBB($count)">ViewMap</button>
 
 </div>
- <section class="spacer" id="spacer">
-    </section>
+
 NEWHTML;
                 print($newhtml);
                 $count++;
@@ -283,7 +275,10 @@ NEWHTML;
 
     </div>
 
+    <section class="spacer" id="spacer">
 
+
+    </section>
 
 <section class="container" id="foot">
 

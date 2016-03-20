@@ -32,7 +32,7 @@ session_start();
     </div>
     <script>
         function logout() {
-            window.location = "SearchBB.php?value=logout";
+            window.location = "SearchBB.php";
         }
     </script>
 </section>

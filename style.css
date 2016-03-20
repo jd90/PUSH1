@@ -50,7 +50,7 @@ h1{
     -khtml-border-radius: 10px;
     border-radius: 10px;
     color: #666699;
-    margin: 0%;
+/*    margin: 0%;   */
     margin-right: auto;
     margin-left: auto;
 }
@@ -64,7 +64,7 @@ h1{
     -khtml-border-radius: 10px;
     border-radius: 10px;
     color: #666699;
-    margin-left: 5%;
+/*    margin-left: 5%;  */
     margin-right: auto;
     margin-left: auto;
 }
@@ -72,14 +72,14 @@ h1{
 .table5{
     border: 1px solid orange;
     padding: 25px;
-    background-color: snow;
+    background-color: #f8f8ff;
     -moz-border-radius:10px;
     -webkit-border-radius: 10px;
     -khtml-border-radius: 10px;
     border-radius: 10px;
     color: #666699;
-    margin-left: 5%;
-    width: 600px;
+    margin-left: 2%;
+    width: 700px;
 }
 
 .table6{
@@ -94,6 +94,16 @@ h1{
     margin-left: auto;
     margin-right: auto;
     width: 960px;
+}
+
+#nodec{
+
+    text-decoration: none;
+}
+
+.table5:HOVER{
+
+    background-color: snow;
 }
 
 .tablejava td{
@@ -296,8 +306,33 @@ main{
     -webkit-border-radius: 5px;
     -khtml-border-radius: 5px;
     border-radius: 5px;
+    width:200px;
+    height:200px;
 }
 
+#imgthumb{
+
+    border: 1px solid orange;
+    -moz-border-radius:5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    width:50px;
+    height:50px;
+
+}
+
+#img4{
+
+
+    border: 1px solid orange;
+    -moz-border-radius:5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    width:300px;
+    height:300px;
+}
 
 
 #spacer{
@@ -406,22 +441,65 @@ body{
     margin-top: 0;
     font-family: 'Roboto', sans-serif;
 }
-
+/*
 .googlemap{
 
     float: right;
 }
-
+*/
 #map{
 
     
     float:right;
-    margin-right: 50px;
-    border: 1px solid #666699;
-    margin-top: 100px;
-    position: fixed;
+    margin-right: 25px;
+    border: 2px solid #666699;
+    margin-top: 10px;
 
-    overflow:scroll;
+}
+
+.btn2{
+    border: 1px solid #666699;
+    color: #666699;
+    background-color: snow;
+    width: 5em;  height: 2em;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.btn2:hover{
+    border: 1px solid orange;
+    color: orange;
+}
+
+.btn3{
+    border: 1px solid #666699;
+    color: #666699;
+    background-color: snow;
+    width: 5em;  height: 2em;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    float: right;
+
+}
+
+.btn3:hover{
+    border: 1px solid orange;
+    color: orange;
+}
+
+
+.btn{
+
+    border: 1px solid #666699;
+    color: #666699;
+    background-color: snow;
+}
+
+.btn:hover{
+    border: 1px solid orange;
+    color: orange;
 
 }
 
@@ -447,7 +525,8 @@ ul#tabs li {
 
 }
 ul#tabs li a {
-    color: #42454a;
+    /*color: #42454a;*/
+    color: #666699;
     background-color: #dedbde;
     border: 1px solid orange;
     border-bottom: none;
@@ -462,7 +541,9 @@ ul#tabs li a:hover {
     background-color: #f1f0ee;
 }
 ul#tabs li a.selected {
-    color: #000; background-color: #f1f0ee;
+    /*color: #000;*/
+    color: orange;
+    background-color: #f1f0ee;
     font-weight: bold;
     padding: 0.7em 0.3em 0.38em 0.3em;
 }
@@ -474,6 +555,7 @@ div.tabContent {
     -webkit-border-radius: 0px 10px 10px 10px !important;
     -khtml-border-radius: 0px 10px 10px 10px !important;
     border-radius: 0px 10px 10px 10px !important;
+    color: #666699;
 }
 div.tabContent.hide {
     display: none;
@@ -496,7 +578,7 @@ li a{
 button.accordion {
     font-family: 'Roboto', sans-serif;
     background-color: #eee;
-    color: #444;
+    color: #666699;
     cursor: pointer;
     padding: 12px;
     width: 100%;
@@ -526,7 +608,7 @@ button.accordion.active, button.accordion:hover {
 button.accordion:after {
     content: '\02795';
     /*font-size: 12px;*/
-    color: #777;
+    color: orange;
     float: left;
     margin-left: 5px;
 }
@@ -551,6 +633,7 @@ div.panel {
     border-right: 1px solid orange;
     border-left: 1px solid orange;
     border-bottom: none;
+    color: orange;
 }
 
 .lastpanel{
@@ -564,12 +647,11 @@ div.panel {
 
 }
 
-
-
 body{
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 div.panel.show {
@@ -580,12 +662,4 @@ div.panel.show {
 #searchbyregion{
 
     height: 200px;
-}
-
-
-.bbimages {
-
-    width:200px;
-    height:200px;
-
 }
