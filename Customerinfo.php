@@ -289,6 +289,30 @@ catch(PDOException $e)
                 <td><label for="surname">Surname: *</label></td>
                 <td><input type="text" id="surname" class="inputform" name="surname" placeholder="Enter your Surname" size="20" maxlength="25" required /></td>
             </tr>
+            <tr><td>
+                    <label for="owneremail">Owner Email:</label></td>
+                <td><select class="inputform" name="owneremail" id="owneremail">
+                        <?php
+                        $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
+                        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+                        try{
+                            $st = $conn-> query("SELECT * FROM [B&B] WHERE [bbid] = '100000'");
+                            foreach($st->fetchAll() as $row) {
+                                $newhtml =
+                                    <<<NEWHTML
+
+                             <option value="{$row[email]}"></option>
+NEWHTML;
+                                print($newhtml);
+                            }
+                        }
+                        catch(PDOException $e)
+                        {print"$e";}
+                        ?>
+
+
+                    </select>
+                </td></tr>
             <tr>
                 <td colspan="4"><p align="right" ><input class="btn2" type="submit" value="Submit" class="submit" /></p></td>
             </tr>
