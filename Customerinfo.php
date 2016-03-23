@@ -238,7 +238,7 @@ catch(PDOException $e)
         <table class="table6">
 
             <tr><td class="small"><p>* Required Fields</p></td></tr>
-<tr><td><label for ="room"></label></td>
+<tr><td><label for ="room">Room *</label></td>
     <td><select class="inputform" name="room" id="room">
             <option value ="">Select Room</option>
 <?php
