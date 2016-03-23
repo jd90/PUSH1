@@ -301,7 +301,7 @@ catch(PDOException $e)
                                 $newhtml =
                                     <<<NEWHTML
 
-                             <option value="{$row[email]}"></option>
+                             <option value="{$row[email]}">{$row[email]}</option>
 NEWHTML;
                                 print($newhtml);
                             }
