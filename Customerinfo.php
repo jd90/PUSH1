@@ -238,6 +238,31 @@ catch(PDOException $e)
         <table class="table6">
 
             <tr><td class="small"><p>* Required Fields</p></td></tr>
+<tr><td><label for ="room"></label></td>
+    <td><select class="inputform" name="room" id="room">
+            <option value ="">Select Room</option>
+<?php
+$conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+try{
+    $st = $conn-> query("SELECT * FROM [room] WHERE [bbid] = '100000'");
+    foreach($st->fetchAll() as $row) {
+        $newhtml =
+<<<NEWHTML
+
+            <option value="{$row[roomname]}">{$row[roomname]}</option>
+
+NEWHTML;
+        print($newhtml);
+    }
+}
+catch(PDOException $e)
+{print"$e";}
+?>
+        </select>
+            </td></tr>
+
+
             <tr><td>
                     <label for="title">Title: *</label></td>
                 <td><select class="inputform" name="title" id="title">
