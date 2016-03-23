@@ -291,7 +291,7 @@ catch(PDOException $e)
             </tr>
             <tr hidden><td>
                     <label for="owneremail">Owner Email:</label></td>
-                <td><select class="inputform" name="owneremail" id="owneremail">
+                <td>
                         <?php
                         $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
                         $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
@@ -301,7 +301,7 @@ catch(PDOException $e)
                                 $newhtml =
                                     <<<NEWHTML
 
-                             <option value="{$row[email]}">{$row[email]}</option>
+                             <input type="text" name="owneremail" value="{$row[email]}" readonly>{$row[email]}</option>
 NEWHTML;
                                 print($newhtml);
                             }
