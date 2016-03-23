@@ -289,7 +289,7 @@ catch(PDOException $e)
                 <td><label for="surname">Surname: *</label></td>
                 <td><input type="text" id="surname" class="inputform" name="surname" placeholder="Enter your Surname" size="20" maxlength="25" required /></td>
             </tr>
-            <tr><td>
+            <tr hidden><td>
                     <label for="owneremail">Owner Email:</label></td>
                 <td>
                         <?php
